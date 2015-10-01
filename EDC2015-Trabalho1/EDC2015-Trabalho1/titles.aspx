@@ -24,26 +24,92 @@
         <PagerStyle CssClass="pagination-ys" HorizontalAlign="Center" />
     </asp:GridView>
     <h2>Title details</h2>
-    <asp:DetailsView ID="DetailsView1" runat="server" DataSourceID="SqlDataSource2" AutoGenerateRows="False" CssClass="table table-condensed table-hover" GridLines="None">
+    <asp:DetailsView ID="DetailsView1" runat="server" DataKeyNames="title_id" DataSourceID="SqlDataSource2" AutoGenerateRows="False" CssClass="table table-condensed table-hover" GridLines="None">
         <Fields>
-            <asp:BoundField DataField="title_id" HeaderText="title_id" ReadOnly="True" SortExpression="title_id" />
-            <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-            <asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
-            <asp:BoundField DataField="pub_id" HeaderText="pub_id" SortExpression="pub_id" />
-            <asp:BoundField DataField="price" HeaderText="price" SortExpression="price" />
-            <asp:BoundField DataField="advance" HeaderText="advance" SortExpression="advance" />
-            <asp:BoundField DataField="royalty" HeaderText="royalty" SortExpression="royalty" />
-            <asp:BoundField DataField="ytd_sales" HeaderText="ytd_sales" SortExpression="ytd_sales" />
+            <asp:BoundField DataField="title_id" HeaderText="title_id" ReadOnly="True" SortExpression="title_id" /> 
+            <asp:TemplateField HeaderText="title" SortExpression="title">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox2" CssClass="form-control input-sm" runat="server" Text='<%# Bind("title") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label2" runat="server" Text='<%# Bind("title") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>    
+            <asp:TemplateField HeaderText="type" SortExpression="type">
+                <EditItemTemplate>
+                    <asp:DropDownList CssClass="form-control input-sm" ID="DropDownList1" runat="server" DataSourceID="DropDownDataSource"
+                        DataTextField="type" DataValueField="type" AppendDataBoundItems="true" SelectedValue='<%# Bind("type") %>'>
+                    </asp:DropDownList>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label1_Type" runat="server" Text='<%# Bind("type") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="pub_id" SortExpression="pub_id">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox3" CssClass="form-control input-sm" runat="server" Text='<%# Bind("pub_id") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label3" runat="server" Text='<%# Bind("pub_id") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField HeaderText="price" SortExpression="price">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox4" CssClass="form-control input-sm" runat="server" Text='<%# Bind("price") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label4" runat="server" Text='<%# Bind("price") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField> 
+            <asp:TemplateField HeaderText="advance" SortExpression="advance">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox5" CssClass="form-control input-sm" runat="server" Text='<%# Bind("advance") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label5" runat="server" Text='<%# Bind("advance") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField> 
+            <asp:TemplateField HeaderText="royalty" SortExpression="royalty">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox6" CssClass="form-control input-sm" runat="server" Text='<%# Bind("royalty") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label6" runat="server" Text='<%# Bind("royalty") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField> 
+            <asp:TemplateField HeaderText="ytd_sales" SortExpression="ytd_sales">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox7" CssClass="form-control input-sm" runat="server" Text='<%# Bind("ytd_sales") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label7" runat="server" Text='<%# Bind("ytd_sales") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
             <asp:TemplateField HeaderText="notes" SortExpression="notes">
                 <EditItemTemplate>
-                    <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("notes") %>'></asp:TextBox>
+                    <asp:TextBox ID="TextBox1" TextMode="MultiLine" Rows="5" CssClass="form-control input-sm" runat="server" Text='<%# Bind("notes") %>'></asp:TextBox>
                 </EditItemTemplate>
                 <ItemTemplate>
                     <asp:Label ID="Label1" runat="server" Text='<%# Bind("notes") %>'></asp:Label>
                 </ItemTemplate>
             </asp:TemplateField>
-            <asp:BoundField DataField="pubdate" HeaderText="pubdate" SortExpression="pubdate" />
-            <asp:CommandField ShowEditButton="True" />
+            <asp:TemplateField HeaderText="pubdate" SortExpression="pubdate">
+                <EditItemTemplate>
+                    <asp:TextBox ID="TextBox8" CssClass="form-control input-sm" runat="server" Text='<%# Bind("pubdate") %>'></asp:TextBox>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:Label ID="Label8" runat="server" Text='<%# Bind("pubdate") %>'></asp:Label>
+                </ItemTemplate>
+            </asp:TemplateField>
+            <asp:TemplateField ShowHeader="False">
+                <EditItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="True" CommandName="Update" CssClass="fa fa-floppy-o"></asp:LinkButton>
+                    &nbsp;<asp:LinkButton ID="LinkButton2" runat="server" CausesValidation="False" CommandName="Cancel" CssClass="fa fa-times"></asp:LinkButton>
+                </EditItemTemplate>
+                <ItemTemplate>
+                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Edit" CssClass="fa fa-pencil"></asp:LinkButton>
+                </ItemTemplate>
+            </asp:TemplateField>
         </Fields>
     </asp:DetailsView>
     <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:pubsConnectionString1 %>"
