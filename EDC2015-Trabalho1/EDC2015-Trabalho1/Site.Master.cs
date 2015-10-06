@@ -7,6 +7,8 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using EDC2015_Trabalho1.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace EDC2015_Trabalho1
 {
@@ -16,6 +18,12 @@ namespace EDC2015_Trabalho1
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
 
+        protected String getUserFullName()
+        {
+            var manager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(new ApplicationDbContext()));
+            var currentUser = manager.FindById(System.Web.HttpContext.Current.User.Identity.GetUserId());
+            return currentUser.FullName;
+        }
         protected void Page_Init(object sender, EventArgs e)
         {
             // The code below helps to protect against XSRF attacks
