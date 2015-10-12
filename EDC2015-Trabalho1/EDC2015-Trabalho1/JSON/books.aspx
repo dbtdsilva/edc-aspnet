@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="books.aspx.cs" Inherits="EDC2015_Trabalho1.JSON.books" %>
+﻿<%@ Page Title="Books" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="books.aspx.cs" Inherits="EDC2015_Trabalho1.JSON.books" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Books <small id="authorName"></small> </h2> 
     <a href="/JSON/default"><i class="fa fa-backward"></i> Back to Authors</a>
