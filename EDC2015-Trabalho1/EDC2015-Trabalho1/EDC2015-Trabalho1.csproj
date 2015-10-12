@@ -193,7 +193,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="JSON\books.aspx" />
     <Content Include="JSON\default.aspx" />
+    <Content Include="JSON\sales.aspx" />
     <Content Include="personal\displayReports.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -395,12 +397,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="JSON\books.aspx.cs">
+      <DependentUpon>books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JSON\books.aspx.designer.cs">
+      <DependentUpon>books.aspx</DependentUpon>
+    </Compile>
     <Compile Include="JSON\default.aspx.cs">
       <DependentUpon>default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="JSON\default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="JSON\sales.aspx.cs">
+      <DependentUpon>sales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="JSON\sales.aspx.designer.cs">
+      <DependentUpon>sales.aspx</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201509271513104_InitialCreate.cs" />
     <Compile Include="Migrations\201509271513104_InitialCreate.Designer.cs">
