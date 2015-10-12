@@ -127,6 +127,10 @@ C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.csprojResolveAssemblyReference.cache
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.dll
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.pdb
+C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015_Trabalho1.Migrations.InitialCreate.resources
+C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.csproj.GenerateResource.Cache
+C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015_Trabalho1.Migrations.BirthDate.resources
+C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015_Trabalho1.Migrations.FullName.resources
+C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.csprojResolveAssemblyReference.cache
