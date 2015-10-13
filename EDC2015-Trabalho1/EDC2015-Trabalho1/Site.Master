@@ -53,29 +53,28 @@
                         <li><a runat="server" href="~/">Home</a></li>
                         <li><a runat="server" href="~/Authors">Authors</a></li>
                         <li><a runat="server" href="~/Titles">Titles</a></li>
-                        <li><a runat="server" href="~/JSON/default">Book-Authors</a></li>
+                        <li><a runat="server" href="~/JSON/default"><i class="fa fa-book"></i></a></li>
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <LoggedInTemplate>
                                 <li><a runat="server" href="~/personal/displayReports"><i class="fa fa-shopping-cart"></i></a></li>
                             </LoggedInTemplate>
                         </asp:LoginView>
                     </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a runat="server" ID="adminLink" visible="false" href="~/Admin/UserManager"><i class="fa fa-users"></i></a></li>
+                        <asp:LoginView runat="server" ViewStateMode="Disabled">
+                            <AnonymousTemplate>
                                 <li><a runat="server" href="~/Account/Register">Register</a></li>
                                 <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
+                            </AnonymousTemplate>
+                            <LoggedInTemplate>
                                 <li><a runat="server" href="~/Account/Manage" title="Manage your account">Hello, <%: getUserFullName() %>!</a></li>
                                 <li>
                                     <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
+                            </LoggedInTemplate>
+                        </asp:LoginView>
+                    </ul>
                 </div>
             </div>
         </div>

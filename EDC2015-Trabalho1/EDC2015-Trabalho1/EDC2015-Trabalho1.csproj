@@ -173,6 +173,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\UserManager.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="Admin\UserManager.aspx" />
     <Content Include="Authors.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -205,6 +206,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="personal\Web.config" />
+    <Content Include="Admin\Web.config" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.4.js" />
     <Content Include="Scripts\jquery-2.1.4.min.js" />
@@ -369,6 +371,13 @@
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\UserManager.aspx.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManager.aspx.designer.cs">
+      <DependentUpon>UserManager.aspx</DependentUpon>
+    </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">
       <DependentUpon>About.aspx</DependentUpon>
@@ -418,6 +427,7 @@
     <Compile Include="JSON\sales.aspx.designer.cs">
       <DependentUpon>sales.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Logic\RoleActions.cs" />
     <Compile Include="Migrations\201509271513104_InitialCreate.cs" />
     <Compile Include="Migrations\201509271513104_InitialCreate.Designer.cs">
       <DependentUpon>201509271513104_InitialCreate.cs</DependentUpon>

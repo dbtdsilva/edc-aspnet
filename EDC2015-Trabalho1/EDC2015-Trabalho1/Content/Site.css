@@ -104,14 +104,15 @@ table a:not(.btn),
 
 .circle
 {
-    height: 60px;
-    width: 60px;
-    line-height: 60px;
-    -moz-border-radius: 30px;
-    border-radius: 35px;
+    height: 100px;
+    width: 100px;
+    line-height: 80px;
+    -moz-border-radius: 60px;
+    border-radius: 200px;
     background-color: darkred;
     color: white;
-    padding: 16px;
+    padding: 20px;
+    margin-left: 8px;
     text-align: center;
     font-size: 25px;
 }

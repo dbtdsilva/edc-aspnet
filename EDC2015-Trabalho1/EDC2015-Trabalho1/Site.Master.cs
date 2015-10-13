@@ -77,7 +77,10 @@ namespace EDC2015_Trabalho1
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (HttpContext.Current.User.IsInRole("admin"))
+            {
+                adminLink.Visible = true;
+            }
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

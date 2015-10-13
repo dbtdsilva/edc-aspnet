@@ -7,27 +7,27 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EDC2015_Trabalho1 {
+namespace EDC2015_Trabalho1.Admin {
     
     
-    public partial class SiteMaster {
+    public partial class UserManager {
         
         /// <summary>
-        /// adminLink control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor adminLink;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// MainContent control.
+        /// SqlDataSource1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }

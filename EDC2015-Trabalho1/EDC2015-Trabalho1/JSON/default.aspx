@@ -42,19 +42,18 @@
             data.forEach(function (item) {
                 content += "<div class='col-lg-4 col-md-4'>";
                 content += "<div class='panel panel-default'><div class='panel-body'>";
-                content += "<div class='col-lg-4 col-md-4'><span class='circle text-center' style='background-color:";
+                content += "<div class='col-lg-4 col-md-4'><span class='circle' style='background-color:";
                 content += "#" + ((1 << 24) * Math.random() | 0).toString(16) + ";'>" + getBadge(item.name) + "</span>";
-                content += "<h5><small style='color:black'>" + item.ID + "</small></h5></div>";
+                content += "<h5 class='text-center'><small class='text-center' style='color:black'>" + item.ID + "</small></h5></div>";
                 content += "<div class='col-lg-8 col-md-8'>";
                 content += "<h4 style='margin-top:0px'>" + item.name + "</h4>";
                 content += "<span>" + item.address + "</span><br/>";
                 content += "<span>" + item.city + ", " + item.state + " " + item.zip + "</span><br/>";
-                content += "<span> <i class='fa fa-phone'></i> " + item.phone + "</span>";
-                content += "</div><div class='col-lg-12 col-md-12' style='text-align: center;'>";
-                content += "<a href='/JSON/sales?author_ID=" + item.ID + "' class='btn btn-default' role='button'>Sales</a>"
+                content += "<span><i class='fa fa-phone' style='margin-bottom:10px'></i>&nbsp;&nbsp; " + item.phone + "</span>";
+                content += "<div><a href='/JSON/sales?author_ID=" + item.ID + "' class='btn btn-default btn-sm' role='button'>Sales</a>"
                 content += "&nbsp;&nbsp;<a href='/JSON/books?author_ID=" + item.ID
-                content += "' class='btn btn-default' role='button'>Books</a></div>";
-                content += "</div></div></div>";
+                content += "' class='btn btn-default btn-sm' role='button'>Books</a></div>";
+                content += "</div></div></div></div>";
             });
             $("#authorsContent").html(content);
         };
