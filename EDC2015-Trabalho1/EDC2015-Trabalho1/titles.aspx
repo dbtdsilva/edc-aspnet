@@ -4,12 +4,12 @@
     <h2>Publication Type</h2>
     <asp:DropDownList CssClass="form-control" ID="ddlTypes" runat="server" AutoPostBack="true" DataSourceID="DropDownDataSource"
         DataTextField="type" DataValueField="type" AppendDataBoundItems="true">
-        <asp:ListItem Text="All types" Value="" />
+        <%-- <asp:ListItem Text="All types" Value="" /> --%>
     </asp:DropDownList>
     <asp:SqlDataSource ID="DropDownDataSource" runat="server" ConnectionString="<%$ ConnectionStrings:pubsConnectionString1 %>"
         SelectCommand="SELECT DISTINCT type FROM [titles]"></asp:SqlDataSource>
     <h2>Titles</h2>
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="table table-condensed table-hover" DataKeyNames="title_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." GridLines="None" AllowSorting="True">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" CssClass="table table-condensed" DataKeyNames="title_id" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." GridLines="None" AllowSorting="True" SelectedRowStyle-BackColor="#99FFCC" HeaderStyle-BackColor="#F0F0F0">
         <Columns>
             <asp:BoundField DataField="title_id" HeaderText="title_id" ReadOnly="True" SortExpression="title_id" />
             <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
@@ -17,13 +17,13 @@
             <asp:BoundField DataField="pub_id" HeaderText="pub_id" SortExpression="pub_id" />
             <asp:TemplateField HeaderText="Comandos">
                 <ItemTemplate>
-                    <asp:LinkButton ID="LinkButton1" runat="server" CausesValidation="False" CommandName="Select" CssClass="fa fa-check-square-o"></asp:LinkButton>
+                    <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" CausesValidation="False" CommandName="Select" CssClass="fa fa-check-square-o" ></asp:LinkButton>
                 </ItemTemplate>
             </asp:TemplateField>
         </Columns>
         <PagerStyle CssClass="pagination-ys" HorizontalAlign="Center" />
     </asp:GridView>
-    <h2>Title details</h2>
+    <asp:Label runat="server" CssClass="h2" ID="title_details" Visible="false">Title details</asp:Label>
     <asp:DetailsView ID="DetailsView1" runat="server" DataKeyNames="title_id" DataSourceID="SqlDataSource2" AutoGenerateRows="False" CssClass="table table-condensed table-hover" GridLines="None">
         <Fields>
             <asp:BoundField DataField="title_id" HeaderText="title_id" ReadOnly="True" SortExpression="title_id" /> 

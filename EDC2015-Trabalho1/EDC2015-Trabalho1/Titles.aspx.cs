@@ -13,5 +13,10 @@ namespace EDC2015_Trabalho1
         {
 
         }
+
+        protected void LinkButton1_Click(object sender, EventArgs e)
+        {
+            title_details.Visible = true;
+        }
     }
 }

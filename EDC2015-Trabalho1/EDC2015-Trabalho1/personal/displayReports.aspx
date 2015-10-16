@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="displayReports.aspx.cs" Inherits="EDC2015_Trabalho1.personal.displayReports" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>As minhas vendas</h2>
-    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-hover table-condensed" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." AllowSorting="True" GridLines="None">
+    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-condensed" DataSourceID="SqlDataSource1" EmptyDataText="There are no data records to display." AllowSorting="True" GridLines="None" SelectedRowStyle-BackColor="#99FFCC" HeaderStyle-BackColor="#F0F0F0">
         <Columns>
             <asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
             <asp:BoundField DataField="ord_num" HeaderText="ord_num" SortExpression="ord_num" />

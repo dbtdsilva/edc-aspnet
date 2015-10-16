@@ -40,6 +40,15 @@ namespace EDC2015_Trabalho1 {
         protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
+        /// title_details control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label title_details;
+        
+        /// <summary>
         /// DetailsView1 control.
         /// </summary>
         /// <remarks>
