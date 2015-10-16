@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso>
+	<guid>40</guid>
+	<nome><![CDATA[Música]]></nome>
+	<imagem><![CDATA[http://acesso.ua.pt/upload/imagens/c_40.jpg]]></imagem>
+	<codigo>0300/9214</codigo>
+	<grau><![CDATA[Licenciatura]]></grau>
+	<ciclo>1</ciclo>
+	<duracao>3 anos letivos / 6 Semestres (180 ECTS)</duracao>
+	<ano_inicio></ano_inicio>
+	<regime><![CDATA[diurno / laboral]]></regime>
+	<horario><![CDATA[]]></horario>
+	<propinas><![CDATA[1063,47€/ano (estudantes nacionais)]]></propinas>
+	<subsistema><![CDATA[Universitário]]></subsistema>
+	<areas>
+		<area><![CDATA[Música]]></area>
+	</areas>
+	<director>
+		<nome>Prof. Doutor Evgueni Zoudilkine</nome>
+		<email>evgueni@ua.pt</email>
+	</director>
+	<departamentos>
+		<departamento>
+			<nome>Departamento de Comunicação e Arte</nome>
+			<url>http://www.ua.pt/ca</url>
+		</departamento>
+	</departamentos>
+	<medias>
+		<fase1>145,9</fase1>
+		<fase2>128,8</fase2>
+		<fase3>0</fase3>
+	</medias>
+	<vagas>
+		<fase1>50</fase1>
+		<fase2>22</fase2>
+		<fase3>3</fase3>
+	</vagas>
+	<provas><![CDATA[Uma das seguintes provas: História da Cultura e Artes (12) ou Inglês (13) ou Matemática (16) ou Português (18)<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>35% da nota da prova de ingresso</li><li>15% nota do pré-requisito</li></ul>]]></provas>
+	<ano_info><![CDATA[2015/2016]]></ano_info>
+	<saidas_profissionais><![CDATA[<p><strong>Compet&ecirc;ncias B&aacute;sicas</strong></p>
+<p>Estruturar e redigir trabalhos em dom&iacute;nios espec&iacute;ficos das ci&ecirc;ncias da m&uacute;sica. Preparar e efetuar uma apresenta&ccedil;&atilde;o e/ou defesa p&uacute;blica de uma ideia ou projeto, se necess&aacute;rio, com suporte tecnol&oacute;gico- Preparar e efetuar uma apresenta&ccedil;&atilde;o p&uacute;blica no quadro da performance- Conhecer o contexto nacional e europeu no que respeita ao desenvolvimento das ci&ecirc;ncias da m&uacute;sica e da performance.</p>
+<p>- Dominar os procedimentos de pesquisa, organiza&ccedil;&atilde;o de informa&ccedil;&atilde;o e sua sistematiza&ccedil;&atilde;o.</p>
+<p><strong>Compet&ecirc;ncias Espec&iacute;ficas</strong></p>
+<p>- Preparar e desenvolver um projetos de interven&ccedil;&atilde;o no quadro da performance tendo em conta aspetos como: tipo de p&uacute;blico, institui&ccedil;&otilde;es, meios, etc. - Desenvolver um trabalho articulado de m&uacute;sica de conjunto em pequenos e grandes ensembles.- Desenvolver um trabalho de cria&ccedil;&atilde;o musical, quer sob o ponto de vista instrumental, quer atrav&eacute;s da utiliza&ccedil;&atilde;o de meios eletroac&uacute;sticos e/ou inform&aacute;ticos.- Desenvolver um trabalho articulado no quadro das artes de espet&aacute;culo em especial em teatro musical- Assessorar a produ&ccedil;&atilde;o de espet&aacute;culos - Colaborar na especialidade em projetos de edi&ccedil;&atilde;o musical multim&eacute;dia</p>
+<p>&nbsp;</p>]]></saidas_profissionais>
+	<objectivos><![CDATA[<p>- Oferecer uma s&oacute;lida forma&ccedil;&atilde;o no &acirc;mbito da Performance, Composi&ccedil;&atilde;o e Ci&ecirc;ncias da M&uacute;sica que permita aos licenciados um acesso privilegiado a diferentes especialidades de 2&ordm; ciclo;- Contribuir para o enriquecimento da vida musical nacional formando potenciais interlocutores com diferentes territ&oacute;rios institucionais, p&uacute;blicos e privados, designadamente ao n&iacute;vel da a&ccedil;&atilde;o cultural e educativa;- Favorecer a interdisciplinaridade e a permeabilidade ao n&iacute;vel da forma&ccedil;&atilde;o universit&aacute;ria em M&uacute;sica, no panorama da oferta europeia sedeada nas institui&ccedil;&otilde;es de ensino superior universit&aacute;rio.</p>]]></objectivos>
+	<observacoes><![CDATA[http://www.ua.pt/sga/PageText.aspx?id=5232 - Ver mais informação sobre pré-requisito __]]></observacoes>
+	<testemunho><![CDATA[]]></testemunho>
+	<pre_requisitos><![CDATA[Grupo P - Aptidão musical <br />Este pré-requisito é eliminatório e o seu resultado é expresso em apto (numa classificação numérica na escala de 100 a 200 pontos, a considerar no cálculo da nota de candidatura) ou não apto. O estudante que seja considerado não apto não poderá concorrer a este curso.]]></pre_requisitos>
+	<local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+	<urlmaisinfo><![CDATA[http://www.ua.pt/sga/PageText.aspx?id=5232]]></urlmaisinfo>
+	<urlcandidaturas><![CDATA[http://]]></urlcandidaturas>
+	<urlmobilidade><![CDATA[http://]]></urlmobilidade>
+	<m23>
+		<provas><![CDATA[aptidão musical <a href="http://www.ua.pt/ensino/PageText.aspx?id=15132" target=_blank>programa e exames</a>]]></provas>
+		<vagas><![CDATA[]]></vagas>
+		<urlinfo><![CDATA[http://www.ua.pt/m23/]]></urlinfo>
+		<observacoes><![CDATA[]]></observacoes>
+	</m23>
+	<posgraduacoes>
+		<periodo><![CDATA[]]></periodo>
+		<corpo_docente><![CDATA[]]></corpo_docente>
+		<destinatarios><![CDATA[]]></destinatarios>
+		<vagas><![CDATA[]]></vagas>
+		<vagas_obs><![CDATA[]]></vagas_obs>
+		<urlmobilidade><![CDATA[]]></urlmobilidade>
+		<ano_info><![CDATA[]]></ano_info>
+		<edital><![CDATA[]]></edital>
+		<ata><![CDATA[]]></ata>
+	</posgraduacoes>
+</curso>
+

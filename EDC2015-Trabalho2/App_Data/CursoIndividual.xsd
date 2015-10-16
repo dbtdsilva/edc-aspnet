@@ -2,7 +2,7 @@
 <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="curso">
     <xs:complexType>
-      <xs:sequence>
+      <xs:sequence minOccurs="0">
         <xs:element name="guid" type="xs:positiveInteger" />
         <xs:element name="nome" type="xs:string" />
         <xs:element name="imagem" type="xs:string" />
@@ -47,18 +47,18 @@
         <xs:element name="medias">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="fase1" type="xs:float" />
-              <xs:element name="fase2" type="xs:float" />
-              <xs:element name="fase3" type="xs:float" />
+              <xs:element name="fase1" type="xs:string" />
+              <xs:element name="fase2" type="xs:string" />
+              <xs:element name="fase3" type="xs:string" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
         <xs:element name="vagas">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="fase1" type="xs:positiveInteger" />
-              <xs:element name="fase2" type="xs:positiveInteger" />
-              <xs:element name="fase3" type="xs:positiveInteger" />
+              <xs:element name="fase1" type="xs:nonNegativeInteger" />
+              <xs:element name="fase2" type="xs:nonNegativeInteger" />
+              <xs:element name="fase3" type="xs:nonNegativeInteger" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

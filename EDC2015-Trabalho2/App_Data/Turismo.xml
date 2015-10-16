@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso>
+	<guid>45</guid>
+	<nome><![CDATA[Turismo]]></nome>
+	<imagem><![CDATA[http://acesso.ua.pt/upload/imagens/c_45.jpg]]></imagem>
+	<codigo>0300/9254</codigo>
+	<grau><![CDATA[Licenciatura]]></grau>
+	<ciclo>1</ciclo>
+	<duracao>3 anos letivos / 6 Semestres (180 ECTS)</duracao>
+	<ano_inicio>2006/2007</ano_inicio>
+	<regime><![CDATA[diurno / laboral]]></regime>
+	<horario><![CDATA[]]></horario>
+	<propinas><![CDATA[1063,47€/ano (estudantes nacionais)]]></propinas>
+	<subsistema><![CDATA[Universitário]]></subsistema>
+	<areas>
+		<area><![CDATA[Gestão]]></area>
+	</areas>
+	<director>
+		<nome>Prof.ª Doutora  Maria Celeste de Aguiar Eusébio</nome>
+		<email>celeste.eusebio@ua.pt</email>
+	</director>
+	<departamentos>
+		<departamento>
+			<nome>Departamento de Economia, Gestão e Engenharia Industrial</nome>
+			<url>http://www.ua.pt/egi</url>
+		</departamento>
+	</departamentos>
+	<medias>
+		<fase1>141,8</fase1>
+		<fase2>137,8</fase2>
+		<fase3>0</fase3>
+	</medias>
+	<vagas>
+		<fase1>23</fase1>
+		<fase2>5</fase2>
+		<fase3>0</fase3>
+	</vagas>
+	<provas><![CDATA[Uma das seguintes provas: Economia (04) ou Matemática Aplicada às Ciências Sociais (17) ou Matemática (16)<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul>]]></provas>
+	<ano_info><![CDATA[2015/2016]]></ano_info>
+	<saidas_profissionais><![CDATA[<p>A Licenciatura em Turismo da Universidade de Aveiro tem por objetivo preparar quadros para o setor do turismo, atividade de grande import&acirc;ncia s&oacute;cio-econ&oacute;mica em Portugal e em fase de expans&atilde;o, para a qual a oferta de t&eacute;cnicos com forma&ccedil;&atilde;o superior se apresenta como insuficiente. Procura-se, neste contexto, formar profissionais de elevada qualifica&ccedil;&atilde;o que possam integrar-se nos setores de planeamento e desenvolvimento do Turismo em organismos governamentais, aut&aacute;rquicos e regionais e ainda a organiza&ccedil;&atilde;o, gest&atilde;o e marketing para o Turismo em empresas p&uacute;blicas e privadas.</p>
+<p>Mais concretamente o curso visa as seguintes sa&iacute;das profissionais:</p>
+<p>- empresas e organiza&ccedil;&otilde;es privadas do setor do turismo (setor hoteleiro, operadores tur&iacute;sticos, companhias de avia&ccedil;&atilde;o, casinos, parques tem&aacute;ticos, empresas de organiza&ccedil;&atilde;o de eventos de aventura, desporto, etc)</p>
+<p>- administra&ccedil;&atilde;o p&uacute;blica central, regional e local do turismo (c&acirc;maras municipais, juntas do turismo, regi&otilde;es de turismo, ETC.)</p>
+<p>- empresas de consultoria e gabinetes de estudos</p>
+<p>- associa&ccedil;&otilde;es</p>
+<p>- institui&ccedil;&otilde;es de ensino e investiga&ccedil;&atilde;o</p>]]></saidas_profissionais>
+	<objectivos><![CDATA[<p>A Licenciatura em Turismo, proposta pela Universidade de Aveiro, tem por objetivo preparar quadros para o setor do turismo, atividade de grande import&acirc;ncia s&oacute;cio-econ&oacute;mica em Portugal e em fase de expans&atilde;o, para a qual a oferta de t&eacute;cnicos com forma&ccedil;&atilde;o superior se apresenta como insuficiente. A evolu&ccedil;&atilde;o deste setor configura-se como muito exigente, num quadro de competi&ccedil;&atilde;o internacional. Trata-se de um setor muito complexo, que interage com v&aacute;rios outros setores (efeito multiplicador) e apresenta impactos relevantes em termos s&oacute;cio-culturais e ambientais. Exige, por tudo isto, uma s&oacute;lida forma&ccedil;&atilde;o de base interdisciplinar, bem como compet&ecirc;ncias espec&iacute;ficas ao n&iacute;vel do planeamento e, sobretudo, da gest&atilde;o, permitindo uma atua&ccedil;&atilde;o eficaz e eficiente neste quadro exigente e complexo.</p>
+<p>Procura-se, neste contexto, formar profissionais de elevada qualifica&ccedil;&atilde;o que possam abranger os setores de planeamento e desenvolvimento do Turismo em organismos governamentais, aut&aacute;rquicos e regionais e ainda a organiza&ccedil;&atilde;o, gest&atilde;o e marketing para o Turismo em empresas p&uacute;blicas e privadas.</p>]]></objectivos>
+	<observacoes><![CDATA[]]></observacoes>
+	<testemunho><![CDATA[]]></testemunho>
+	<pre_requisitos><![CDATA[]]></pre_requisitos>
+	<local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+	<urlmaisinfo><![CDATA[http://]]></urlmaisinfo>
+	<urlcandidaturas><![CDATA[http://]]></urlcandidaturas>
+	<urlmobilidade><![CDATA[http://]]></urlmobilidade>
+	<m23>
+		<provas><![CDATA[português E matemática <a href="http://www.ua.pt/ensino/PageText.aspx?id=15132" target=_blank>programa e exames</a>]]></provas>
+		<vagas><![CDATA[]]></vagas>
+		<urlinfo><![CDATA[http://www.ua.pt/m23]]></urlinfo>
+		<observacoes><![CDATA[]]></observacoes>
+	</m23>
+	<posgraduacoes>
+		<periodo><![CDATA[]]></periodo>
+		<corpo_docente><![CDATA[]]></corpo_docente>
+		<destinatarios><![CDATA[]]></destinatarios>
+		<vagas><![CDATA[]]></vagas>
+		<vagas_obs><![CDATA[]]></vagas_obs>
+		<urlmobilidade><![CDATA[]]></urlmobilidade>
+		<ano_info><![CDATA[]]></ano_info>
+		<edital><![CDATA[]]></edital>
+		<ata><![CDATA[]]></ata>
+	</posgraduacoes>
+</curso>
+

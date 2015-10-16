@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso>
+	<guid>29</guid>
+	<nome><![CDATA[Engenharia Geológica]]></nome>
+	<imagem><![CDATA[http://acesso.ua.pt/upload/imagens/c_29.jpg]]></imagem>
+	<codigo>0300/9116</codigo>
+	<grau><![CDATA[Licenciatura]]></grau>
+	<ciclo>1</ciclo>
+	<duracao>3 anos letivos / 6 Semestres (180 ECTS)</duracao>
+	<ano_inicio></ano_inicio>
+	<regime><![CDATA[diurno / laboral]]></regime>
+	<horario><![CDATA[]]></horario>
+	<propinas><![CDATA[1063,47€/ano (estudantes nacionais)]]></propinas>
+	<subsistema><![CDATA[Universitário]]></subsistema>
+	<areas>
+		<area><![CDATA[Geociências]]></area>
+	</areas>
+	<director>
+		<nome>Prof. Doutor Jorge Manuel Pessoa Girão Medina</nome>
+		<email>jmedina@ua.pt</email>
+	</director>
+	<departamentos>
+		<departamento>
+			<nome>Departamento de Geociências</nome>
+			<url>http://www.ua.pt/geo</url>
+		</departamento>
+	</departamentos>
+	<medias>
+		<fase1>120,6</fase1>
+		<fase2>117,4</fase2>
+		<fase3>0</fase3>
+	</medias>
+	<vagas>
+		<fase1>20</fase1>
+		<fase2>18</fase2>
+		<fase3>15</fase3>
+	</vagas>
+	<provas><![CDATA[Um dos seguintes conjuntos: Matemática (19) e Biologia e Geologia (02) ou Matemática (19) e Física e Química (07) <br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>60% da nota do ensino secundário</li><li>40% da nota da prova de ingresso</li></ul>]]></provas>
+	<ano_info><![CDATA[2015/2016]]></ano_info>
+	<saidas_profissionais><![CDATA[<p>Um licenciado em Engenharia Geol&oacute;gica est&aacute; preparado para integrar o quadro t&eacute;cnico-cient&iacute;fico de empresas, organismos p&uacute;blicos e privados nas &aacute;reas de geotecnia, recursos minerais met&aacute;licos e n&atilde;o met&aacute;licos, recursos energ&eacute;ticos, recursos h&iacute;dricos, solos, geoqu&iacute;mica e geof&iacute;sica aplicadas (nomeadamente ao ambiente, engenharia e arqueologia), geologia marinha, cartografia, topografia, fotogeologia, dete&ccedil;&atilde;o remota e sistemas de informa&ccedil;&atilde;o geogr&aacute;fica.</p>]]></saidas_profissionais>
+	<objectivos><![CDATA[<p>A forma&ccedil;&atilde;o em Engenharia Geol&oacute;gica foi introduzida em Portugal na d&eacute;cada de 80, sendo a Universidade de Aveiro uma das primeiras institui&ccedil;&otilde;es a criar uma licenciatura nesse dom&iacute;nio. Este tipo de cursos veio potenciar uma liga&ccedil;&atilde;o estreita entre a Geologia e a Engenharia, em particular com os ramos de Civil e Ambiente, e desempenham, por isso, um papel relevante no desenvolvimento sustentado da atividade humana, sempre que est&atilde;o em causa os recursos naturais e os m&uacute;ltiplos efeitos da sua utiliza&ccedil;&atilde;o.</p>
+<p>O mercado de trabalho tem absorvido com apet&ecirc;ncia grande parte dos profissionais desta &aacute;rea, o que demonstra que a licenciatura re&uacute;ne condi&ccedil;&otilde;es de sustentabilidade no panorama nacional. Por outro lado, a qualidade do curso ministrado na UA tem sido claramente validada quer pelas sucessivas renova&ccedil;&otilde;es da acredita&ccedil;&atilde;o da licenciatura pela Ordem dos Engenheiros, quer pelos relat&oacute;rios das Comiss&otilde;es de Avalia&ccedil;&atilde;o Externa da FUP (Funda&ccedil;&atilde;o das Universidades Portuguesas).</p>
+<p>No &acirc;mbito do Processo de Bolonha, o Departamento de Geoci&ecirc;ncias da UA apresentou uma proposta, que veio a ser aprovada pelo Minist&eacute;rio da Ci&ecirc;ncia, Tecnologia e Ensino Superior, envolvendo dois ciclos de forma&ccedil;&atilde;o: um conducente ao grau de Licenciado (1&ordm; ciclo) e outro ao grau de Mestre (2&ordm; ciclo). Embora o 1&ordm; ciclo corresponda &agrave; atribui&ccedil;&atilde;o de um grau acad&eacute;mico, a habilita&ccedil;&atilde;o para o exerc&iacute;cio da profiss&atilde;o de Engenheiro Ge&oacute;logo exigir&aacute; a conclus&atilde;o do 2&ordm; ciclo.</p>
+<p>Os objetivos do curso de Engenharia Geol&oacute;gica, ao n&iacute;vel do 1&ordm; ciclo s&atilde;o:</p>
+<p>- Promover uma s&oacute;lida prepara&ccedil;&atilde;o cient&iacute;fica de base nas &aacute;reas de matem&aacute;tica, f&iacute;sica qu&iacute;mica e ci&ecirc;ncias geol&oacute;gicas;</p>
+<p>- Fornecer forma&ccedil;&atilde;o em &aacute;reas fundamentais de engenharia;</p>
+<p>- Conferir compet&ecirc;ncias de car&aacute;ter cient&iacute;fico, t&eacute;cnico e experimental no &acirc;mbito da Engenharia Geol&oacute;gica;</p>
+<p>- Promover a capacidade cr&iacute;tica e o sentido de responsabilidade;</p>
+<p>- Desenvolver preocupa&ccedil;&otilde;es de natureza &eacute;tica e social;</p>
+<p>- Qualificar os licenciados para o prosseguimento de estudos ao n&iacute;vel do 2&ordm; Ciclo.</p>
+<p>Os objetivos propostos s&atilde;o mais corretamente atingidos atrav&eacute;s de um curso de espetro largo que articule de forma harmoniosa a compreens&atilde;o e utiliza&ccedil;&atilde;o dos conceitos fundamentais de matem&aacute;tica, f&iacute;sica e qu&iacute;mica com uma s&oacute;lida prepara&ccedil;&atilde;o em geologia e nos seus m&eacute;todos de trabalho e com os conhecimentos tecnol&oacute;gicos pr&oacute;prios das engenharias.</p>
+<p>Embora o exerc&iacute;cio da profiss&atilde;o de Engenheiro Ge&oacute;logo exija uma forma&ccedil;&atilde;o acad&eacute;mica de dois ciclos (grau de Mestre), a gradua&ccedil;&atilde;o ao n&iacute;vel de 1&ordm; ciclo qualificar&aacute; os licenciados para o desempenho das seguintes fun&ccedil;&otilde;es:</p>
+<p>a) T&eacute;cnico em empresas e laborat&oacute;rios (p&uacute;blicos ou privados) nas &aacute;reas de geotecnia, hidrologia, explora&ccedil;&atilde;o de recursos, carateriza&ccedil;&atilde;o e defesa ambiental, controle de qualidade, geoqu&iacute;mica, geof&iacute;sica e afins.</p>
+<p>b) T&eacute;cnico de campo em laborat&oacute;rios e empresas (p&uacute;blicos ou privados)</p>
+<p>c) T&eacute;cnico de Parque/Reserva Natural</p>
+<p>d) T&eacute;cnico em servi&ccedil;os de administra&ccedil;&atilde;o central, local e regional</p>]]></objectivos>
+	<observacoes><![CDATA[]]></observacoes>
+	<testemunho><![CDATA[]]></testemunho>
+	<pre_requisitos><![CDATA[]]></pre_requisitos>
+	<local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+	<urlmaisinfo><![CDATA[http://]]></urlmaisinfo>
+	<urlcandidaturas><![CDATA[http://]]></urlcandidaturas>
+	<urlmobilidade><![CDATA[http://]]></urlmobilidade>
+	<m23>
+		<provas><![CDATA[matemática <a href="http://www.ua.pt/ensino/PageText.aspx?id=15132" target=_blank>programa e exames</a>]]></provas>
+		<vagas><![CDATA[]]></vagas>
+		<urlinfo><![CDATA[http://www.ua.pt/m23]]></urlinfo>
+		<observacoes><![CDATA[]]></observacoes>
+	</m23>
+	<posgraduacoes>
+		<periodo><![CDATA[]]></periodo>
+		<corpo_docente><![CDATA[]]></corpo_docente>
+		<destinatarios><![CDATA[]]></destinatarios>
+		<vagas><![CDATA[]]></vagas>
+		<vagas_obs><![CDATA[]]></vagas_obs>
+		<urlmobilidade><![CDATA[]]></urlmobilidade>
+		<ano_info><![CDATA[]]></ano_info>
+		<edital><![CDATA[]]></edital>
+		<ata><![CDATA[]]></ata>
+	</posgraduacoes>
+</curso>
+

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<curso>
+	<guid>30</guid>
+	<nome><![CDATA[Engenharia Mecânica]]></nome>
+	<imagem><![CDATA[http://acesso.ua.pt/upload/imagens/c_30.jpg]]></imagem>
+	<codigo>0300/9369</codigo>
+	<grau><![CDATA[Mestrado Integrado]]></grau>
+	<ciclo>1</ciclo>
+	<duracao>5 anos letivos / 10 Semestres (300 ECTS)</duracao>
+	<ano_inicio></ano_inicio>
+	<regime><![CDATA[diurno / laboral]]></regime>
+	<horario><![CDATA[]]></horario>
+	<propinas><![CDATA[1063,47€/ano (estudantes nacionais)]]></propinas>
+	<subsistema><![CDATA[Universitário]]></subsistema>
+	<areas>
+		<area><![CDATA[Engenharia Mecânica]]></area>
+	</areas>
+	<director>
+		<nome>Prof. Doutor Alfredo Manuel Balacó de Morais</nome>
+		<email>abm@ua.pt</email>
+	</director>
+	<departamentos>
+		<departamento>
+			<nome>Departamento de Engenharia Mecânica</nome>
+			<url>http://www.ua.pt/mec</url>
+		</departamento>
+	</departamentos>
+	<medias>
+		<fase1>138,8</fase1>
+		<fase2>141,3</fase2>
+		<fase3>0</fase3>
+	</medias>
+	<vagas>
+		<fase1>102</fase1>
+		<fase2>3</fase2>
+		<fase3>0</fase3>
+	</vagas>
+	<provas><![CDATA[07 Física e Química
+19 Matemática A<br /><br /><strong>O cálculo da nota de acesso considera:</strong><ul><li>50% da nota do ensino secundário</li><li>50% da nota da prova de ingresso</li></ul>]]></provas>
+	<ano_info><![CDATA[2015/2016]]></ano_info>
+	<saidas_profissionais><![CDATA[<p>Tomando como base a experi&ecirc;ncia dos &uacute;ltimos anos, poder&aacute; afirmar-se que os futuros Mestres em Engenharia Mec&acirc;nica pela UA n&atilde;o ter&atilde;o dificuldades de inser&ccedil;&atilde;o no mercado de trabalho. Recorde-se, que de acordo com o Observat&oacute;rio do Emprego e Forma&ccedil;&atilde;o Profissional, os diplomados em Engenharia Mec&acirc;nica pela UA s&atilde;o os primeiros, a n&iacute;vel nacional, a integrar-se no mercado de trabalho.</p>
+<p>Os Mestres em Engenharia Mec&acirc;nica pela UA podem desempenhar fun&ccedil;&otilde;es nos mais variados v&aacute;rios setores industriais. No entanto, poder&atilde;o destacar-se os setores onde os atuais Licenciados pela UA desempenham a sua atividade profissional: ind&uacute;stria de moldes, projeto de automa&ccedil;&atilde;o, desenvolvimento de produto, manuten&ccedil;&atilde;o industrial, projeto de estruturas e equipamentos, produ&ccedil;&atilde;o industrial, ind&uacute;stria de eletrodom&eacute;sticos, ind&uacute;stria autom&oacute;vel, gest&atilde;o industrial, ind&uacute;stria vidreira, ind&uacute;stria cer&acirc;mica, ind&uacute;stria de revestimentos, inje&ccedil;&atilde;o de termopl&aacute;sticos, servi&ccedil;os municipalizados, projeto e constru&ccedil;&atilde;o de elevadores, ensino e centros de investiga&ccedil;&atilde;o.</p>
+<p>Um aspeto que deve ser mencionado &eacute; o facto de que uma percentagem elevada dos Licenciados em Engenharia Mec&acirc;nica pela UA (&gt;20%) terem atingido, num curto espa&ccedil;o de tempo, posi&ccedil;&otilde;es de lideran&ccedil;a e de responsabilidade nas organiza&ccedil;&otilde;es e empresas onde desempenham a sua atividade profissional.</p>]]></saidas_profissionais>
+	<objectivos><![CDATA[<p>O Mestrado Integrado em Engenharia Mec&acirc;nica tem, ap&oacute;s os primeiros anos de forma&ccedil;&atilde;o em ci&ecirc;ncias de base e ci&ecirc;ncias de engenharia, o projeto de &iacute;ndole industrial como atividade central e globalizante. A capacidade de levar a bom porto estes projetos com base nos conhecimentos ministrados e num trabalho aut&oacute;nomo e sistem&aacute;tico por parte dos alunos envolvendo a procura de informa&ccedil;&atilde;o, an&aacute;lise t&eacute;cnica e tecnol&oacute;gica e apresenta&ccedil;&atilde;o de solu&ccedil;&otilde;es economicamente vi&aacute;veis constitui um dos principais objetivos da forma&ccedil;&atilde;o.</p>
+<p>No entanto, outros valores de car&aacute;ter formativo ser&atilde;o tomados em profunda considera&ccedil;&atilde;o.</p>
+<p>O primeiro deles constitui o reconhecimento e satisfa&ccedil;&atilde;o de voca&ccedil;&otilde;es. Para o efeito, o DEM dever&aacute; apresentar-se como um espa&ccedil;o aberto &agrave; colabora&ccedil;&atilde;o com a sociedade promovendo a realiza&ccedil;&atilde;o de projeto bilaterais.</p>
+<p>Pretende-se, tamb&eacute;m, sensibilizar os alunos para os aspetos humanos, sociais e &eacute;ticos. Neste quadro, a forma&ccedil;&atilde;o dever&aacute; proporcionar aos jovens Mestres o futuro exerc&iacute;cio da pr&aacute;tica profissional inserida nos mais estritos princ&iacute;pios &eacute;tico-sociais. S&atilde;o fundamentais, neste campo, a compreens&atilde;o do dever e exerc&iacute;cio da profiss&atilde;o bem como a legisla&ccedil;&atilde;o segundo a qual se rege, o estabelecimento de uma atitude de forma&ccedil;&atilde;o ao longo da vida, a compreens&atilde;o da rela&ccedil;&atilde;o existente entre o trabalho e os interesses dos diferentes intervenientes e, finalmente, a apropria&ccedil;&atilde;o de uma atitude respons&aacute;vel face aos princ&iacute;pios de seguran&ccedil;a, sa&uacute;de e pol&iacute;ticas ambientais.</p>
+<p>A familiariza&ccedil;&atilde;o com o mundo empresarial &eacute; outro dos objetivos fundamentais da forma&ccedil;&atilde;o. Prev&ecirc;-se, neste &acirc;mbito, a realiza&ccedil;&atilde;o frequente de visitas de estudo, a organiza&ccedil;&atilde;o de palestras proferidas por cientistas ou quadros t&eacute;cnicos de diferentes empresas e obviamente, a realiza&ccedil;&atilde;o de projetos e trabalhos de I&amp;D com interesse industrial.</p>
+<p>Finalmente, &eacute; importante tomar em considera&ccedil;&atilde;o a mentaliza&ccedil;&atilde;o dos futuros mestres para a inser&ccedil;&atilde;o no ambiente profissional. Tal tarefa ser&aacute; assegurada, prioritariamente, atrav&eacute;s da auto-responsabiliza&ccedil;&atilde;o inerente ao trabalho de disserta&ccedil;&atilde;o de Mestrado.</p>]]></objectivos>
+	<observacoes><![CDATA[É conferido o grau de Licenciado em Ciências de Engenharia Mecânica aos alunos que tenham realizado os 180 ECTS correspondentes aos primeiros seis semestres curriculares de trabalho. É conferido o grau de Mestre em Engenharia Mecânica (Mestrado Integrado) aos alunos que tenham realizado a totalidade dos 300 ECTS do curso.]]></observacoes>
+	<testemunho><![CDATA[]]></testemunho>
+	<pre_requisitos><![CDATA[]]></pre_requisitos>
+	<local><![CDATA[Campus Universitário de Santiago, Aveiro]]></local>
+	<urlmaisinfo><![CDATA[http://]]></urlmaisinfo>
+	<urlcandidaturas><![CDATA[http://]]></urlcandidaturas>
+	<urlmobilidade><![CDATA[http://]]></urlmobilidade>
+	<m23>
+		<provas><![CDATA[matemática <a href="http://www.ua.pt/ensino/PageText.aspx?id=15132" target=_blank>programa e exames</a>]]></provas>
+		<vagas><![CDATA[]]></vagas>
+		<urlinfo><![CDATA[http://www.ua.t/m23/]]></urlinfo>
+		<observacoes><![CDATA[]]></observacoes>
+	</m23>
+	<posgraduacoes>
+		<periodo><![CDATA[]]></periodo>
+		<corpo_docente><![CDATA[]]></corpo_docente>
+		<destinatarios><![CDATA[]]></destinatarios>
+		<vagas><![CDATA[]]></vagas>
+		<vagas_obs><![CDATA[]]></vagas_obs>
+		<urlmobilidade><![CDATA[]]></urlmobilidade>
+		<ano_info><![CDATA[]]></ano_info>
+		<edital><![CDATA[http://acesso.ua.pt/upload/editais/e_1231.pdf]]></edital>
+		<ata><![CDATA[]]></ata>
+	</posgraduacoes>
+</curso>
+
