@@ -3,7 +3,6 @@
     <div>
         <h2>Lista de Cursos</h2>
         <asp:GridView ID="GridView1" CssClass="table table-condensed" runat="server" AutoGenerateColumns="False" DataSourceID="XmlDataSource1" BorderStyle="None" HeaderStyle-BackColor="#0099FF" AllowPaging="True" GridLines="None">
-            
             <Columns>
                 <asp:HyperLinkField HeaderText="GUID" DataTextField="GUID" DataNavigateUrlFields="GUID" SortExpression="GUID" DataNavigateUrlFormatString="~/Course?ID={0}" />
                 <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />

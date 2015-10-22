@@ -174,7 +174,12 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="App_Data\CursoEmpty.xml" />
     <Content Include="App_Data\cursos.xml" />
-    <Content Include="App_Data\EngenhariaFisica.xml" />
+    <Content Include="App_Data\curso_details.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\EngenhariaFisica.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\EngenhariaGeologica.xml" />
     <Content Include="App_Data\EngenhariaMecanica.xml" />
     <Content Include="App_Data\lista_cursos.xsl" />
@@ -190,6 +195,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Course.aspx" />
     <Content Include="Courses.aspx" />
     <Content Include="Account\Web.config" />
     <Content Include="App_Data\EngenhariaQuimica.xml">
@@ -390,6 +396,13 @@
     </Compile>
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Course.aspx.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Course.aspx.designer.cs">
+      <DependentUpon>Course.aspx</DependentUpon>
     </Compile>
     <Compile Include="Courses.aspx.cs">
       <DependentUpon>Courses.aspx</DependentUpon>
