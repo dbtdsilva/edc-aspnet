@@ -182,8 +182,19 @@
     </Content>
     <Content Include="App_Data\EngenhariaGeologica.xml" />
     <Content Include="App_Data\EngenhariaMecanica.xml" />
-    <Content Include="App_Data\lista_cursos.xsl" />
+    <Content Include="App_Data\lista_cursos.xsl">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Musica.xml" />
+    <Content Include="App_Data\Parte2\Properties.xml">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Parte2\PropertiesInline.xslt">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="App_Data\Parte2\PropertiesOwners.xslt">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="App_Data\Turismo.xml" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -215,6 +226,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Rents.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\FontAwesome.otf" />
@@ -422,6 +434,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Rents.aspx.cs">
+      <DependentUpon>Rents.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Rents.aspx.designer.cs">
+      <DependentUpon>Rents.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>

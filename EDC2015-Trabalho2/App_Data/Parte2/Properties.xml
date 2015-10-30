@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<properties>
+  <property type="house" nregister="87634">
+    <value cost="412213" currency="$" />
+    <address city="Aveiro" street="Rua da Pêga" port="5" />
+    <owners>
+      <owner taxnumber="253199123">
+        <purchase date="04-05-1992" sold="04-10-2005" />
+        <name firstname="Diogo" lastname="Silva" />
+      </owner>
+      <owner taxnumber="123123112">
+        <purchase date="04-10-2005" sold="05-10-2010" />
+        <name firstname="Diogo" lastname="Corte" />
+      </owner>
+      <owner taxnumber="51215125">
+        <purchase date="05-10-2010" />
+        <name firstname="Joana" lastname="Duarte" />
+      </owner>
+    </owners>
+  </property>
+  <property type="house" nregister="123123">
+    <value cost="10000" currency="€" />
+    <address city="Porto" street="Rua da Lucinda" port="1" />
+    <owners>
+      <owner taxnumber="253199123">
+        <purchase date="04-05-2004" />
+        <name firstname="Diogo" lastname="Silva" />
+      </owner>
+    </owners>
+  </property>
+  <property type="apartment" nregister="55555">
+    <value cost="500" currency="€" />
+    <address city="Beja" street="Rua XPTO" port="2" />
+    <owners>
+      <owner taxnumber="68468684">
+        <purchase date="04-05-2014" />
+        <name firstname="Rita" lastname="Durate" />
+      </owner>
+    </owners>
+  </property>
+</properties>
