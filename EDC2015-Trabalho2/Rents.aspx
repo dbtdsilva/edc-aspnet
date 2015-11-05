@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Rents.aspx.cs" Inherits="EDC2015_Trabalho2.Properties" %>
+﻿<%@ Page Title="Rents" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Rents.aspx.cs" Inherits="EDC2015_Trabalho2.Properties" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Properties</h2>
     <hr>

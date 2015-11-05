@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Municipalities.aspx.cs" Inherits="EDC2015_Trabalho2.municipalities" %>
+﻿<%@ Page Title="Municipalities" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Municipalities.aspx.cs" Inherits="EDC2015_Trabalho2.municipalities" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Properties organized by municipality</h2>
     <hr>

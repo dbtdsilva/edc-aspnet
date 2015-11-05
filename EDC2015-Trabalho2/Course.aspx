@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Course.aspx.cs" Inherits="EDC2015_Trabalho2.Course" %>
+﻿<%@ Page Title="Course" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Course.aspx.cs" Inherits="EDC2015_Trabalho2.Course" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Informação do curso</h2>
     <asp:DetailsView ID="DetailsView1" runat="server"  AutoGenerateRows="False" CssClass="table table-condensed" DataSourceID="XmlDataSource1" GridLines="None">

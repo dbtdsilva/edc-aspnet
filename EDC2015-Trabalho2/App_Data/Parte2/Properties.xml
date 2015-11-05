@@ -1,83 +1,91 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <properties>
   <property type="house" nregister="87634">
-    <value cost="412213" currency="$" />
+    <value cost="25350" currency="$" />
     <address city="Aveiro" street="Rua da Pêga" port="5" />
     <owners>
-      <owner taxnumber="253199123">
-        <purchase date="04-05-1992" sold="04-10-2005" />
-        <name firstname="Diogo" lastname="Silva" />
-      </owner>
       <owner taxnumber="123123112">
-        <purchase date="04-10-2005" sold="05-10-2010" />
+        <purchase date="04-10-2005" sold="05-05-2015" />
         <name firstname="Diogo" lastname="Corte" />
       </owner>
-      <owner taxnumber="51215125">
-        <purchase date="05-10-2010" />
-        <name firstname="Joana" lastname="Duarte" />
+      <owner taxnumber="234675869">
+        <purchase date="05-05-2015" />
+        <name firstname="João" lastname="Francisco" />
       </owner>
     </owners>
   </property>
-  <property type="house" nregister="123123">
-    <value cost="10000" currency="€" />
-    <address city="Porto" street="Rua da Lucinda" port="1" />
+  <property type="house" nregister="32515">
+    <value cost="75000" currency="€" />
+    <address city="Porto" street="Largo do Priorado" port="79" />
     <owners>
       <owner taxnumber="253199123">
-        <purchase date="04-05-2004" sold="3-2-2015" />
+        <purchase date="04-05-2004" sold="03-08-2012" />
         <name firstname="Diogo" lastname="Silva" />
       </owner>
-      <owner taxnumber="234675869">
-        <purchase date="3-2-2015" />
-        <name firstname="Ola " lastname="Mundo" />
+      <owner taxnumber="334512152">
+        <purchase date="03-08-2012" />
+        <name firstname="Rui" lastname="Almeida" />
       </owner>
     </owners>
   </property>
   <property type="apartment" nregister="55555">
-    <value cost="500" currency="€" />
-    <address city="Porto" street="Rua XPTO" port="2" />
+    <value cost="7500" currency="€" />
+    <address city="Porto" street="Rua de Miraflor" port="43" />
     <owners>
       <owner taxnumber="68468684">
-        <purchase date="04-05-2014" />
-        <name firstname="Rita" lastname="Durate" />
+        <purchase date="04-05-2014" sold="06-06-2015" />
+        <name firstname="Rita" lastname="Duarte" />
+      </owner>
+      <owner taxnumber="334512152">
+        <purchase date="06-06-2015" />
+        <name firstname="Rui" lastname="Almeida" />
       </owner>
     </owners>
   </property>
-  <property type="house" nregister="123123">
-    <value cost="10000" currency="€" />
-    <address city="Aveiro" street="Rua da Lucinda" port="14" />
+  <property type="house" nregister="48466">
+    <value cost="32000" currency="€" />
+    <address city="Aveiro" street="Rua da Fonte Velha" port="14" />
     <owners>
       <owner taxnumber="253199123">
-        <purchase date="04-05-2004" sold="3-2-2015" />
+        <purchase date="04-05-2004" sold="03-02-2015" />
         <name firstname="Diogo" lastname="Silva" />
       </owner>
       <owner taxnumber="234675869">
-        <purchase date="3-2-2015" />
-        <name firstname="Ola " lastname="Mundo" />
+        <purchase date="03-02-2015" />
+        <name firstname="João " lastname="Francisco" />
       </owner>
     </owners>
   </property>
-  <property type="apartment" nregister="55555">
-    <value cost="500" currency="€" />
+  <property type="apartment" nregister="79552">
+    <value cost="5600" currency="€" />
     <address city="Faro" street="Rua Monte Velho" port="2" />
     <owners>
       <owner taxnumber="68468684">
         <purchase date="04-05-2014" />
-        <name firstname="Rita" lastname="Durate" />
+        <name firstname="Rita" lastname="Duarte" />
       </owner>
     </owners>
   </property>
-  <property type="house" nregister="123123">
-    <value cost="124112" currency="€" />
-    <address city="Aveiro" street="Rua Nova" port="22" />
+  <property type="house" nregister="98465">
+    <value cost="22000" currency="€" />
+    <address city="Aveiro" street="Rua da Capela Nova" port="22" />
     <owners>
       <owner taxnumber="253199123">
-        <purchase date="04-05-2004" sold="3-2-2015" />
+        <purchase date="04-05-2004" sold="03-02-2015" />
         <name firstname="Diogo" lastname="Silva" />
       </owner>
       <owner taxnumber="234675869">
-        <purchase date="3-2-2015" />
-        <name firstname="Ola " lastname="Mundo" />
+        <purchase date="03-02-2015" sold="03-05-2015" />
+        <name firstname="João" lastname="Francisco" />
+      </owner>
+      <owner taxnumber="253199123">
+        <purchase date="03-05-2015" />
+        <name firstname="Diogo " lastname="Silva" />
       </owner>
     </owners>
+  </property>
+  <property type="house" nregister="123111">
+    <value cost="352650" currency="€" />
+    <address city="Albufeira" street="Rua da Oura" port="3" />
   </property>
 </properties>
