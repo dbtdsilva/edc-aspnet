@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Rents.aspx.cs" Inherits="EDC2015_Trabalho2.Properties" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <h2>Properties</h2>
+    <hr>
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CssClass="table table-condensed " DataSourceID="XmlDataSource1"
                     GridLines="None" OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" ShowFooter="True"  >
         <Columns>
@@ -97,7 +98,9 @@
         </Columns>
         <HeaderStyle BackColor="#0099FF" ForeColor="White" />
     </asp:GridView>
+    <div class="col-log-12 col-md-12" style="height:20px;"></div>
     <h2>Properties Owners</h2>
+    <hr>
     <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataSourceID="XmlDataSource2" 
         CssClass="table table-condensed" GridLines="None" OnRowUpdating="GridView2_RowUpdating" OnRowDeleting="GridView2_RowDeleting" 
         ShowFooter="True">
@@ -181,6 +184,45 @@
         </Columns>
         <HeaderStyle BackColor="#0099FF" ForeColor="White" />
     </asp:GridView>
+    <div class="col-log-12 col-md-12" style="height:20px;"></div>
+    <h2>Find properties owned by:</h2>
+    <hr>
+    <div class="col-log-12 col-md-12">
+        <div class="col-log-3 col-md-3" style="width:120px; margin-top: 10px;">
+            Tax Number:
+            </div>
+        <div class="col-log-9 col-md-9">
+            <asp:TextBox ID="taxNumber" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;   
+            <asp:Button ID="search" CssClass="btn btn-md btn-success" runat="server" Text="Search" AutoPostBack="True" OnClick="search_Click"/>
+        </div>
+    </div>
+    <div class="col-log-12 col-md-12" style="height:20px;"></div>
+    <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataSourceID="XmlDataSource3" 
+        CssClass="table table-condensed" GridLines="None" BorderStyle="None" HeaderStyle-BackColor="#0099FF" AllowPaging="True" OnDataBound="GridView3_DataBound">
+        <Columns>
+            <asp:BoundField DataField="Type" HeaderText="Type" SortExpression="Type" />
+            <asp:BoundField DataField="RegisterNumber" HeaderText="RegisterNumber" SortExpression="RegisterNumber" />
+            <asp:BoundField DataField="Cost" HeaderText="Cost" SortExpression="Cost" />
+            <asp:BoundField DataField="Currency" HeaderText="Currency" SortExpression="Currency" />
+            <asp:BoundField DataField="City" HeaderText="City" SortExpression="City" />
+            <asp:BoundField DataField="Street" HeaderText="Street" SortExpression="Street" />
+            <asp:BoundField DataField="Port" HeaderText="Port" SortExpression="Port" />
+        </Columns>
+        <EmptyDataTemplate>
+            <div class="panel panel-warning">
+                <div class="panel-heading">
+                <h3 class="panel-title">Warning!!!</h3>
+                </div>
+                <div class="panel-body">
+                The person with this tax number has no properties.
+                </div>
+            </div>
+        </EmptyDataTemplate>
+        <HeaderStyle BackColor="#0099FF" HorizontalAlign="Center" ForeColor="White"></HeaderStyle>
+        <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+    </asp:GridView>
+
     <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/Parte2/Properties.xml" TransformFile="~/App_Data/Parte2/PropertiesInline.xslt"></asp:XmlDataSource>
     <asp:XmlDataSource ID="XmlDataSource2" runat="server" DataFile="~/App_Data/Parte2/Properties.xml" TransformFile="~/App_Data/Parte2/PropertiesOwners.xslt"></asp:XmlDataSource>
-    </asp:Content>
+    <asp:XmlDataSource ID="XmlDataSource3" runat="server" DataFile="~/App_Data/Parte2/Properties.xml" TransformFile="~/App_Data/Parte2/CurrentOwners.xslt"></asp:XmlDataSource>
+</asp:Content>

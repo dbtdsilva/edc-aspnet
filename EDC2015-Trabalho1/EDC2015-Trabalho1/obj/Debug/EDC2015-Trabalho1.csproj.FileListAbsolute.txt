@@ -134,3 +134,5 @@ C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015_Trabalho1.Migrations.BirthDate.resources
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015_Trabalho1.Migrations.FullName.resources
 C:\Users\dbtds\Documents\GitHubVisualStudio\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.csprojResolveAssemblyReference.cache
+C:\Users\Diogo\Source\Repos\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.dll
+C:\Users\Diogo\Source\Repos\edc-aspnet\EDC2015-Trabalho1\EDC2015-Trabalho1\obj\Debug\EDC2015-Trabalho1.pdb

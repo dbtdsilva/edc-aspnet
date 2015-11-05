@@ -180,5 +180,16 @@ namespace EDC2015_Trabalho2
                 Response.Redirect(Request.RawUrl);
             }
         }
+
+        protected void search_Click(object sender, EventArgs e)
+        {
+            XmlDataSource3.XPath = "properties/property[@taxnumber='" + taxNumber.Text+"']";
+        }
+
+        protected void GridView3_DataBound(object sender, EventArgs e)
+        {
+            XmlDataSource3.XPath = "properties/property[@taxnumber='" + taxNumber.Text + "']";
+        }
+
     }
 }

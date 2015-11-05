@@ -186,6 +186,8 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Musica.xml" />
+    <Content Include="App_Data\Parte2\CurrentOwners.xslt" />
+    <Content Include="App_Data\Parte2\Municipalities.xslt" />
     <Content Include="App_Data\Parte2\Properties.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -226,6 +228,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Municipalities.aspx" />
     <Content Include="Rents.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -434,6 +437,13 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Municipalities.aspx.cs">
+      <DependentUpon>Municipalities.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Municipalities.aspx.designer.cs">
+      <DependentUpon>Municipalities.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Rents.aspx.cs">
       <DependentUpon>Rents.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
