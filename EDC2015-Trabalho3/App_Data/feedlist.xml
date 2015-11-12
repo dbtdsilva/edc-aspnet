@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feeds>
+  <feed name="Expresso" url="http://feeds.feedburner.com/expresso-geral" />
+  <feed name="Publico" url="http://feeds.feedburner.com/PublicoRSS" />
+</feeds>
