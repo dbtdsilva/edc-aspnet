@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EDC2015_Trabalho3._Default" %>
+﻿<%@ Page Title="Feed Reader" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="EDC2015_Trabalho3._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -11,7 +11,7 @@
             </asp:DropDownList>
         </div>
         <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 text-right" >
-            <button class="btn btn-primary"><i class="fa fa-rss"></i> Manage Feeds</button>
+            <a class="btn btn-primary" href="manageFeeds"><i class="fa fa-rss"></i> Manage Feeds</a>
         </div>
     </div>
     <div class="row">
@@ -39,6 +39,7 @@
         </div>
     </div>
     <h3>Feed News</h3>
+    <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/news.xslt"></asp:Xml>
     <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/feedlist.xml"></asp:XmlDataSource>
     <asp:XmlDataSource ID="XmlDataSourceDynamic" runat="server" DataFile="~/App_Data/feedlist.xml" TransformFile="~/App_Data/feed.xslt"  XPath="/feed"></asp:XmlDataSource>
 </asp:Content>

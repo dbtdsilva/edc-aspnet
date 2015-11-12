@@ -29,7 +29,14 @@ namespace EDC2015_Trabalho3
             {
                 logo.ImageUrl = urlnode.InnerText;
                 logo.DataBind();
+            } else
+            {
+                logo.ImageUrl = "~/Content/noimage.png";
+                logo.DataBind();
             }
+
+            Xml1.Document = feed;
+            Xml1.DataBind();
         }
         
         protected void DetailsView1_DataBound(object sender, EventArgs e)
