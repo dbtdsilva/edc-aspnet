@@ -1,10 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
   <xsl:template match="/rss/channel">
+    <span class="h3">Feed News</span>&#160;
+    <span>[<xsl:value-of select="count(item)"/>]</span><br/><br/>
     <div class="row">
       <xsl:for-each select="item">
         <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
-          <div class="well well-sm" style="min-height:270px">
+          <div class="well well-sm" style="min-height:290px">
             <h4>
               <a>
                 <xsl:attribute name="href">

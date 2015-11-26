@@ -50,7 +50,6 @@
                 </div>
             </div>
         </div>
-        <h3>Feed News</h3>
         <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/news.xslt"></asp:Xml>
     </div>
     
