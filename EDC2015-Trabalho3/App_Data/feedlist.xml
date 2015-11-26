@@ -2,4 +2,5 @@
 <feeds>
   <feed name="Expresso" url="http://feeds.feedburner.com/expresso-geral" />
   <feed name="Publico" url="http://feeds.feedburner.com/PublicoRSS" />
+  <feed name="exame informatica" url="http://feeds.feedburner.com/Exameinformatica-mercados2" />
 </feeds>

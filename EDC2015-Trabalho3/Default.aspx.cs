@@ -50,7 +50,6 @@ namespace EDC2015_Trabalho3
         
         protected void DetailsView1_DataBound(object sender, EventArgs e)
         {
-            Feeds_SelectedIndexChanged(sender, e);
         }
 
         protected void XmlDataSourceDynamic_Load(object sender, EventArgs e)
