@@ -10,7 +10,7 @@
 namespace EDC2015_Trabalho3 {
     
     
-    public partial class _Default {
+    public partial class manageFeeds {
         
         /// <summary>
         /// DetailsView2 control.
