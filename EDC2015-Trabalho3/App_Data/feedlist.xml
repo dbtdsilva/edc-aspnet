@@ -4,4 +4,5 @@
   <feed name="Publico" url="http://feeds.feedburner.com/PublicoRSS" />
   <feed name="Exame Informática" url="http://feeds.feedburner.com/Exameinformatica-mercados" />
   <feed name="Invalid RSS" url="http://feeds.feedburner.com/yolo-you-tried" />
+  <feed name="Jornal de Notícias" url="http://feeds.jn.pt/JN-ULTIMAS" />
 </feeds>
