@@ -2,5 +2,6 @@
 <feeds>
   <feed name="Expresso" url="http://feeds.feedburner.com/expresso-geral" />
   <feed name="Publico" url="http://feeds.feedburner.com/PublicoRSS" />
-  <feed name="exame informatica" url="http://feeds.feedburner.com/Exameinformatica-mercados" />
+  <feed name="Exame Informática" url="http://feeds.feedburner.com/Exameinformatica-mercados" />
+  <feed name="Invalid RSS" url="http://feeds.feedburner.com/yolo-you-tried" />
 </feeds>

@@ -2,19 +2,30 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
-    <h1><i class="fa fa-rss"></i> My Feed Reader</h1>
+    <h1><i class="fa fa-rss"></i>My Feed Reader</h1>
     <hr />
     <div class="row">
         <div class="col-lg-9 col-md-9 col-sm-8 col-xs-8">
             <asp:DropDownList CssClass="form-control" ID="Feeds" runat="server" AutoPostBack="true" DataSourceID="XmlDataSource1"
-                                DataTextField="name" DataValueField="name" AppendDataBoundItems="true" OnSelectedIndexChanged="Feeds_SelectedIndexChanged">
+                DataTextField="name" DataValueField="name" AppendDataBoundItems="true" OnSelectedIndexChanged="Feeds_SelectedIndexChanged">
             </asp:DropDownList>
         </div>
-        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 text-right" >
-            <a class="btn btn-primary" href="manageFeeds"><i class="fa fa-rss"></i> Manage Feeds</a>
+        <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4 text-right">
+            <a class="btn btn-primary" href="manageFeeds"><i class="fa fa-rss"></i>Manage Feeds</a>
         </div>
     </div>
-    <div class="row">
+    <div runat="server" id="warning">
+        <br />
+        <div class="panel panel-danger">
+            <div class="panel-heading">
+                <h3 class="panel-title">URL não é válido</h3>
+            </div>
+            <div class="panel-body">
+                Servidor falhou a carregar o URL do feed RSS fornecido. Verifique o URL fornecido!
+            </div>
+        </div>
+    </div>
+    <div runat="server" id="data" class="row">
         <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
             <h3>Feed Info</h3>
             <asp:DetailsView OnDataBound="DetailsView1_DataBound" ID="DetailsView1" runat="server" AutoGenerateRows="False" CssClass="table" DataSourceID="XmlDataSourceDynamic" GridLines="None">
@@ -37,9 +48,10 @@
                 <asp:Image ID="logo" runat="server" AlternateText="Logo image" />
             </div>
         </div>
+        <h3>Feed News</h3>
+        <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/news.xslt"></asp:Xml>
     </div>
-    <h3>Feed News</h3>
-    <asp:Xml ID="Xml1" runat="server" TransformSource="~/App_Data/news.xslt"></asp:Xml>
+    
     <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/App_Data/feedlist.xml"></asp:XmlDataSource>
-    <asp:XmlDataSource ID="XmlDataSourceDynamic" runat="server" DataFile="~/App_Data/feedlist.xml" TransformFile="~/App_Data/feed.xslt"  XPath="/feed"></asp:XmlDataSource>
+    <asp:XmlDataSource ID="XmlDataSourceDynamic" runat="server" DataFile="~/App_Data/feedlist.xml" TransformFile="~/App_Data/feed.xslt" XPath="/feed"></asp:XmlDataSource>
 </asp:Content>
