@@ -37,6 +37,15 @@ namespace EDC2015_Trabalho3
 
             Xml1.Document = feed;
             Xml1.DataBind();
+
+            for (int i = 0; i < DetailsView1.Rows.Count; i++)
+            {
+                if (DetailsView1.Rows[i].Cells[1].Text == "" ||
+                    DetailsView1.Rows[i].Cells[1].Text == "&nbsp;")
+                    DetailsView1.Rows[i].Visible = false;
+                else
+                    DetailsView1.Rows[i].Visible = true;
+            }
         }
         
         protected void DetailsView1_DataBound(object sender, EventArgs e)
