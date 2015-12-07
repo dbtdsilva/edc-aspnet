@@ -55,39 +55,39 @@
                </a>
                <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav">
-                     <li class="dropdown messages-menu">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                           <i class="fa fa-envelope-o"></i>
-                           <span class="label label-success">4</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                           <li class="header">You have 4 messages</li>
-                           <li>
-                              <ul class="menu">
-                                 <li>
-                                    <a href="#">
-                                       <div class="pull-left">
-
-                                          <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
-                                       </div>
-                                       <h4>Support Team
-                            <small><i class="fa fa-clock-o"></i>5 mins</small>
-                                       </h4>
-                                       <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                 </li>
-                              </ul>
-                           </li>
-                           <li class="footer"><a href="#">See All Messages</a></li>
-                        </ul>
-                     </li>
                      <!-- User Account: style can be found in dropdown.less -->
                      <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
                            <li><a runat="server" href="~/Account/Login">Login</a></li>
-                           <li><a runat="server" href="~/Account/Register">Sign Up</a></li>
+                           <li><a runat="server" href="~/Account/Login">Sign Up</a></li>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
+                           <li class="dropdown messages-menu">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 <i class="fa fa-envelope-o"></i>
+                                 <span class="label label-success">4</span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <li class="header">You have 4 messages</li>
+                                 <li>
+                                    <ul class="menu">
+                                       <li>
+                                          <a href="#">
+                                             <div class="pull-left">
+
+                                                <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
+                                             </div>
+                                             <h4>Support Team
+                                                <small><i class="fa fa-clock-o"></i>5 mins</small>
+                                             </h4>
+                                             <p>Why not buy a new awesome theme?</p>
+                                          </a>
+                                       </li>
+                                    </ul>
+                                 </li>
+                                 <li class="footer"><a href="#">See All Messages</a></li>
+                              </ul>
+                           </li>
                            <li class="dropdown user user-menu">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
@@ -164,44 +164,62 @@
                   <li class="header">MAIN NAVIGATION</li>
                   <li class="treeview">
                      <a href="#">
-                        <i class="fa fa-dashboard"></i>
+                        <i class="fa fa-laptop"></i>
                         <span>Products</span>
                         <i class="fa fa-angle-left pull-right"></i>
                      </a>
                      <ul class="treeview-menu">
                         <li class="treeview">
                            <a href="#">
-                              <i class="fa fa-dashboard"></i>
+                              <i class="fa fa-wrench"></i>
                               <span>Components</span>
                               <i class="fa fa-angle-left pull-right"></i>
                            </a>
                            <ul class="treeview-menu">
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Processors</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Motherboard</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>CPU</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>GPU</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Sound Board</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Network Card</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Chassis</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Hard Disk Drive</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Solid-state Drive</a></li>
-                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Other</a></li>
+                              <li><a runat="server" href="~/">Processors</a></li>
+                              <li><a runat="server" href="~/">Motherboard</a></li>
+                              <li><a runat="server" href="~/">CPU</a></li>
+                              <li><a runat="server" href="~/">GPU</a></li>
+                              <li><a runat="server" href="~/">Sound Board</a></li>
+                              <li><a runat="server" href="~/">Network Card</a></li>
+                              <li><a runat="server" href="~/">Chassis</a></li>
+                              <li><a runat="server" href="~/">Hard Disk Drive</a></li>
+                              <li><a runat="server" href="~/">Solid-state Drive</a></li>
+                              <li><a runat="server" href="~/">Other</a></li>
                            </ul>
                         </li>
-                        <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Pre-built Computers</a></li>
-                        <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Laptops</a></li>
+                        <li><a runat="server" href="~/">Pre-built Computers</a></li>
+                        <li><a runat="server" href="~/">Laptops</a></li>
                      </ul>
                   </li>
                   <li>
-                     <a href="pages/widgets.html">
-                        <i class="fa fa-th"></i>
-                        <span>Widgets</span>
-                        <small class="label pull-right bg-green">new</small>
+                     <a runat="server" href="~/">
+                        <i class="fa fa-rss"></i>
+                        <span>Tech News</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a runat="server" href="~/">
+                        <i class="fa fa-globe"></i>
+                        <span>About us</span>
                      </a>
                   </li>
 
                   <li class="header">NEWSLETTER</li>
-                  <li><a><span>Subscribe to the newsletter</span></a></li>
+                  <li>
+                     <div class="user-panel text-sidebar" style="white-space: normal">
+                        <small>Add your email below and receive our newsletter with the most recent updates about news and promotions of our products.</small>
+                     </div>
+                     <div class="sidebar-form">
+                        <div class="input-group">
+                           <input type="text" name="q" class="form-control input-sm" placeholder="Enter your email..">
+                           <span class="input-group-btn">
+                              <button type="submit" name="news" id="news-btn" class="btn btn-sm btn-flat"><i class="fa fa-newspaper-o"></i></button>
+                           </span>
+                        </div>
+                     </div>
+
+                  </li>
                </ul>
             </section>
             <!-- /.sidebar -->
@@ -219,7 +237,7 @@
             </section>
 
             <section class="content">
-               <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               <asp:ContentPlaceHolder ID="MainContent" runat="server" >
                </asp:ContentPlaceHolder>
             </section>
          </div>

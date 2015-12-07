@@ -58,6 +58,15 @@ namespace TechGeeks.Account {
         protected global::System.Web.UI.WebControls.CheckBox RememberMe;
         
         /// <summary>
+        /// loginBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button loginBtn;
+        
+        /// <summary>
         /// OpenAuthLogin control.
         /// </summary>
         /// <remarks>
@@ -101,5 +110,14 @@ namespace TechGeeks.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordRegister;
+        
+        /// <summary>
+        /// registerBtn control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button registerBtn;
     }
 }

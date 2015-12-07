@@ -2,7 +2,7 @@
 
 <div id="socialLoginList">
    <asp:ListView runat="server" ID="providerDetails" ItemType="System.String"
-      SelectMethod="GetProviderNames">
+      SelectMethod="GetProviderNames" ViewStateMode="Disabled"> 
       <ItemTemplate>
          <button type="submit" class="btn btn-default btn-flat" name="provider" value="<%#: Item %>">
             <asp:Label runat="server" CssClass="<%#: getIcon(Item) %>"></asp:Label>

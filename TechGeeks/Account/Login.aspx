@@ -5,8 +5,8 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
    <div class="row">
       <div class="col-md-6">
-         <section id="loginForm" class="well">
-            <div class="form-horizontal">
+         <section id="loginForm" class="well" >
+            <asp:Panel runat="server" CssClass="form-horizontal" DefaultButton="loginBtn">
                <h4 class="text-center">Use a local account to log in</h4>
                <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                   <p class="text-danger">
@@ -36,10 +36,10 @@
                         <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
                      </div></li>
 
-                     <li><asp:Button runat="server" ValidationGroup="groupLogin" OnClick="LogIn" Text="Log in" CssClass="btn btn-flat btn-default" /></li>
+                     <li><asp:Button ID="loginBtn" runat="server" ValidationGroup="groupLogin" OnClick="LogIn" Text="Log in" CssClass="btn btn-flat btn-default" /></li>
                   </ul>
                </div>
-            </div>
+            </asp:Panel>
          </section>
          <section id="socialLoginForm" class="text-center well" >
             <h4>Login using external provider</h4>
@@ -49,7 +49,7 @@
 
       <div class="col-md-6">
          <section id="registerForm" class="well">
-            <div class="form-horizontal">
+            <asp:Panel runat="server" CssClass="form-horizontal" DefaultButton="registerBtn" >
                <h4 class="text-center">Create a new account</h4>
                <p class="text-danger">
                   <asp:Literal runat="server" ID="ErrorRegister" />
@@ -82,10 +82,10 @@
                </div>
                <div class="form-group">
                   <div class="col-md-offset-2 col-md-10">
-                     <asp:Button runat="server" ValidationGroup="groupRegister" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default btn-flat" />
+                     <asp:Button ID="registerBtn" runat="server" ValidationGroup="groupRegister" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default btn-flat" />
                   </div>
                </div>
-            </div>
+            </asp:Panel>
          </section>
       </div>
    </div>
