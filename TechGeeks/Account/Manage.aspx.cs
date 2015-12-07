@@ -25,7 +25,7 @@ namespace TechGeeks.Account
             return manager.HasPassword(User.Identity.GetUserId());
         }
 
-        public bool HasPhoneNumber { get; private set; }
+        //public bool HasPhoneNumber { get; private set; }
 
         public bool TwoFactorEnabled { get; private set; }
 
@@ -37,7 +37,7 @@ namespace TechGeeks.Account
         {
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
 
-            HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
+            //HasPhoneNumber = String.IsNullOrEmpty(manager.GetPhoneNumber(User.Identity.GetUserId()));
 
             // Enable this after setting up two-factor authentientication
             //PhoneNumber.Text = manager.GetPhoneNumber(User.Identity.GetUserId()) ?? String.Empty;
