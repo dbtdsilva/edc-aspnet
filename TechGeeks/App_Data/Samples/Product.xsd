@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema attributeFormDefault="unqualified" 
+           elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Product">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Name" type="xs:string" />
+        <xs:element name="Price">
+          <xs:simpleType>
+            <xs:restriction base="xs:decimal">
+              <xs:minInclusive value="0"></xs:minInclusive>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Unit" minOccurs="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:string">
+              <xs:enumeration value="$" />
+              <xs:enumeration value="€" />
+              <xs:enumeration value="USD" />
+              <xs:enumeration value="EUR" />
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Short" type="xs:string" />
+        <xs:element name="LaunchDate" type="xs:string" minOccurs="0" />
+        <xs:element name="Description">
+          <xs:complexType mixed="true">
+            <xs:sequence>
+              <xs:any processContents="skip" minOccurs="0" maxOccurs="unbounded"></xs:any>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

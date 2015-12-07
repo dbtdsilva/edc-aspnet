@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Data>
+  <Transactions>
+    <Transaction bought_date="2015-04-04T19:41:00" quantity="10" product_id="1"/>
+    <Transaction bought_date="2015-05-21T22:39:00" quantity="1" product_id="5"/>
+  </Transactions>
+</Data>

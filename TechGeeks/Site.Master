@@ -149,7 +149,7 @@
                      </div>
                   </LoggedInTemplate>
                </asp:LoginView>
-               
+
                <div class="sidebar-form">
                   <div class="input-group">
                      <input type="text" name="q" class="form-control" placeholder="Search...">
@@ -206,21 +206,21 @@
                   </li>
 
                   <li class="header">NEWSLETTER</li>
-                  <li>
-                     <div class="user-panel text-sidebar" style="white-space: normal">
-                        <small>Add your email below and receive our newsletter with the most recent updates about news and promotions of our products.</small>
-                     </div>
-                     <div class="sidebar-form">
-                        <div class="input-group">
-                           <input type="text" name="q" class="form-control input-sm" placeholder="Enter your email..">
-                           <span class="input-group-btn">
-                              <button type="submit" name="news" id="news-btn" class="btn btn-sm btn-flat"><i class="fa fa-newspaper-o"></i></button>
-                           </span>
-                        </div>
-                     </div>
-
-                  </li>
                </ul>
+               <div class="sidebar-form">
+                  <div class="text-sidebar" style="white-space: normal">
+                     <small>Add your email below and receive our newsletter with the most recent updates about news and promotions of our products.</small>
+                  </div>
+                  <div class="sidebar-form">
+                     <div class="input-group">
+                        <input type="text" name="q" class="form-control input-sm" placeholder="Enter your email..">
+                        <span class="input-group-btn">
+                           <button type="submit" name="news" id="news-btn" class="btn btn-sm btn-flat"><i class="fa fa-newspaper-o"></i></button>
+                        </span>
+                     </div>
+                  </div>
+
+               </div>
             </section>
             <!-- /.sidebar -->
          </aside>
@@ -228,16 +228,12 @@
          <div class="content-wrapper">
             <section class="content-header">
                <h1>
-                  <%: Page.Title %><small>PAGE</small> 
+                  <%: Page.Title %><small>PAGE</small>
                </h1>
-               <!--<ol class="breadcrumb">
-            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-            <li class="active">Dashboard</li>
-          </ol>-->
             </section>
 
             <section class="content">
-               <asp:ContentPlaceHolder ID="MainContent" runat="server" >
+               <asp:ContentPlaceHolder ID="MainContent" runat="server">
                </asp:ContentPlaceHolder>
             </section>
          </div>

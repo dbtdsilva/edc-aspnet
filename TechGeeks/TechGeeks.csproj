@@ -194,6 +194,10 @@
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="App_Data\aspnet-TechGeeks-20151203044817.mdf" />
     <Content Include="App_Data\aspnet-TechGeeks-20151203044817_log.ldf" />
+    <Content Include="App_Data\Samples\Product.xml" />
+    <Content Include="App_Data\Samples\UserData_Transaction.xml">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\admin-lte.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -220,6 +224,12 @@
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="App_Data\Samples\Product.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_Data\Samples\UserData_Transaction.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Scripts\jquery-2.0.0.intellisense.js" />
     <Content Include="Scripts\jquery-2.0.0.js" />
     <Content Include="Scripts\jquery-2.0.0.min.js" />
