@@ -69,7 +69,8 @@
                       <li>
                         <a href="#">
                           <div class="pull-left">
-                            <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+                            
+                            <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
                           </div>
                           <h4>
                             Support Team
@@ -86,15 +87,15 @@
               <!-- User Account: style can be found in dropdown.less -->
               <li class="dropdown user user-menu">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                  <!--<img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">-->
-                  <span class="hidden-xs">Alexander Pierce</span>
+                  <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
+                  <span class="hidden-xs"><%: Context.User.Identity.GetUserName()  %></span>
                 </a>
                 <ul class="dropdown-menu">
                   <!-- User image -->
                   <li class="user-header">
-                    <!--<img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">-->
+                    <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
                     <p>
-                      Alexander Pierce - Web Developer
+                      <%: Context.User.Identity.GetUserName()  %>
                       <small>Member since Nov. 2012</small>
                     </p>
                   </li>
@@ -125,20 +126,17 @@
           </div>
         </nav>
       </header>
-      <!-- Left side column. contains the logo and sidebar -->
       <aside class="main-sidebar">
-        <!-- sidebar: style can be found in sidebar.less -->
         <section class="sidebar">
-          <!-- Sidebar user panel -->
           <div class="user-panel">
             <div class="pull-left image">
-              <img src="dist/img/user2-160x160.jpg" class="img-circle">
+              <img src='<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>' class="img-circle">
             </div>
-            <div class="pull-left info">
-              <p>Alexander Pierce</p>
+            <div class="pull-left info text-center">
+                <span>Welcome</span>
+                <p><b><%: Context.User.Identity.GetUserName() %></b></p>
             </div>
           </div>
-          <!-- search form -->
           <div class="sidebar-form">
             <div class="input-group">
               <input type="text" name="q" class="form-control" placeholder="Search...">
