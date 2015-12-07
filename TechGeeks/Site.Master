@@ -4,200 +4,234 @@
 
 <html lang="en">
 <head runat="server">
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - TechGeeks</title>
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>TechGeeks</title>
 
-    <asp:PlaceHolder runat="server">
-        <%: Scripts.Render("~/bundles/modernizr") %>
-    </asp:PlaceHolder>
-    <webopt:BundleReference runat="server" Path="~/Content/css" />
-    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+   <asp:PlaceHolder runat="server">
+      <%: Scripts.Render("~/bundles/modernizr") %>
+   </asp:PlaceHolder>
+   <webopt:BundleReference runat="server" Path="~/Content/css" />
+   <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 </head>
 <body class="hold-transition skin-red fixed sidebar-mini">
-    <form runat="server">
-        <asp:ScriptManager runat="server">
-            <Scripts>
-                <%--Framework Scripts--%>
-                <asp:ScriptReference Name="MsAjaxBundle" />
-                <asp:ScriptReference Name="jquery" />
-                <asp:ScriptReference Name="bootstrap" />
-                <asp:ScriptReference Name="respond" />
-                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
-                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
-                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
-                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
-                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
-                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
-                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
-                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
-                <asp:ScriptReference Name="WebFormsBundle" />
-                <%--Site Scripts--%>
-                <asp:ScriptReference Path="Scripts/app.min.js"></asp:ScriptReference>
-                <asp:ScriptReference Path="Scripts/jquery-ui-1.11.4.min.js"></asp:ScriptReference>
-                <asp:ScriptReference Path="Scripts/jquery.slimscroll.min.js"></asp:ScriptReference>
-            </Scripts>
-        </asp:ScriptManager>
-        <script>
-            $.widget.bridge('uibutton', $.ui.button);
-        </script>
-        <div class="wrapper">
+   <form runat="server">
+      <asp:ScriptManager runat="server">
+         <Scripts>
+            <%--Framework Scripts--%>
+            <asp:ScriptReference Name="MsAjaxBundle" />
+            <asp:ScriptReference Name="jquery" />
+            <asp:ScriptReference Name="bootstrap" />
+            <asp:ScriptReference Name="respond" />
+            <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+            <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+            <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+            <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+            <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+            <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+            <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+            <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+            <asp:ScriptReference Name="WebFormsBundle" />
+            <%--Site Scripts--%>
+            <asp:ScriptReference Path="Scripts/app.min.js"></asp:ScriptReference>
+            <asp:ScriptReference Path="Scripts/jquery-ui-1.11.4.min.js"></asp:ScriptReference>
+            <asp:ScriptReference Path="Scripts/jquery.slimscroll.min.js"></asp:ScriptReference>
+         </Scripts>
+      </asp:ScriptManager>
+      <script>
+         $.widget.bridge('uibutton', $.ui.button);
+      </script>
+      <div class="wrapper">
+         <header class="main-header">
+            <!-- Logo -->
+            <a runat="server" href="~/" class="logo">
+               <span class="logo-mini">T<b>G</b></span>
+               <span class="logo-lg">Tech<b>Geeks</b></span>
+            </a>
+            <nav class="navbar navbar-static-top" role="navigation">
+               <!-- Sidebar toggle button-->
+               <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                  <span class="sr-only">Toggle navigation</span>
+               </a>
+               <div class="navbar-custom-menu">
+                  <ul class="nav navbar-nav">
+                     <li class="dropdown messages-menu">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <i class="fa fa-envelope-o"></i>
+                           <span class="label label-success">4</span>
+                        </a>
+                        <ul class="dropdown-menu">
+                           <li class="header">You have 4 messages</li>
+                           <li>
+                              <ul class="menu">
+                                 <li>
+                                    <a href="#">
+                                       <div class="pull-left">
 
-            <header class="main-header">
-                <!-- Logo -->
-                <a runat="server" href="~/" class="logo">
-                    <span class="logo-mini">T<b>G</b></span>
-                    <span class="logo-lg">Tech<b>Geeks</b></span>
-                </a>
-                <nav class="navbar navbar-static-top" role="navigation">
-                    <!-- Sidebar toggle button-->
-                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
-                        <span class="sr-only">Toggle navigation</span>
-                    </a>
-                    <div class="navbar-custom-menu">
-                        <ul class="nav navbar-nav">
-                            <li class="dropdown messages-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <i class="fa fa-envelope-o"></i>
-                                    <span class="label label-success">4</span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <li class="header">You have 4 messages</li>
-                                    <li>
-                                        <ul class="menu">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="pull-left">
-
-                                                        <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
-                                                    </div>
-                                                    <h4>Support Team
+                                          <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
+                                       </div>
+                                       <h4>Support Team
                             <small><i class="fa fa-clock-o"></i>5 mins</small>
-                                                    </h4>
-                                                    <p>Why not buy a new awesome theme?</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="footer"><a href="#">See All Messages</a></li>
-                                </ul>
-                            </li>
-                            <!-- User Account: style can be found in dropdown.less -->
-                            <li class="dropdown user user-menu">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                    <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
-                                    <span class="hidden-xs"><%: Context.User.Identity.GetUserName()  %></span>
-                                </a>
-                                <ul class="dropdown-menu">
-                                    <!-- User image -->
-                                    <li class="user-header">
-                                        <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
-                                        <p>
-                                            <%: Context.User.Identity.GetUserName()  %>
-                                            <small>Member since Nov. 2012</small>
-                                        </p>
-                                    </li>
-                                    <!-- Menu Body -->
-                                    <li class="user-body">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </li>
-                                    <!-- Menu Footer-->
-                                    <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
-                                        </div>
-                                        <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
+                                       </h4>
+                                       <p>Why not buy a new awesome theme?</p>
+                                    </a>
+                                 </li>
+                              </ul>
+                           </li>
+                           <li class="footer"><a href="#">See All Messages</a></li>
                         </ul>
-                    </div>
-                </nav>
-            </header>
-            <aside class="main-sidebar">
-                <section class="sidebar">
-                    <div class="user-panel">
+                     </li>
+                     <!-- User Account: style can be found in dropdown.less -->
+                     <asp:LoginView runat="server" ViewStateMode="Disabled">
+                        <AnonymousTemplate>
+                           <li><a runat="server" href="~/Account/Login">Login</a></li>
+                           <li><a runat="server" href="~/Account/Register">Sign Up</a></li>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                           <li class="dropdown user user-menu">
+                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                 <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
+                                 <span class="hidden-xs"><%: Context.User.Identity.GetUserName()  %></span>
+                              </a>
+                              <ul class="dropdown-menu">
+                                 <!-- User image -->
+                                 <li class="user-header">
+                                    <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
+                                    <p>
+                                       <%: Context.User.Identity.GetUserName()  %>
+                                       <small>Member since Nov. 2012</small>
+                                    </p>
+                                 </li>
+                                 <!-- Menu Body -->
+                                 <li class="user-body">
+                                    <div class="col-xs-4 text-center">
+                                       <a href="#">Followers</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                       <a href="#">Sales</a>
+                                    </div>
+                                    <div class="col-xs-4 text-center">
+                                       <a href="#">Friends</a>
+                                    </div>
+                                 </li>
+                                 <!-- Menu Footer-->
+                                 <li class="user-footer">
+                                    <div class="pull-left">
+                                       <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    </div>
+                                    <div class="pull-right">
+                                       <asp:LoginStatus CssClass="btn btn-default btn-flat" runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </div>
+                                 </li>
+                              </ul>
+                           </li>
+                        </LoggedInTemplate>
+                     </asp:LoginView>
+
+                  </ul>
+               </div>
+            </nav>
+         </header>
+         <aside class="main-sidebar">
+            <section class="sidebar">
+               <asp:LoginView runat="server" ViewStateMode="Disabled">
+                  <AnonymousTemplate>
+                  </AnonymousTemplate>
+                  <LoggedInTemplate>
+                     <div class="user-panel">
                         <div class="pull-left image">
-                            <img src='<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>' class="img-circle">
+                           <img src='<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>' class="img-circle">
                         </div>
                         <div class="pull-left info text-center">
-                            <span>Welcome</span>
-                            <p><b><%: Context.User.Identity.GetUserName() %></b></p>
+                           <span>Welcome</span>
+                           <p><b><%: Context.User.Identity.GetUserName() %></b></p>
                         </div>
-                    </div>
-                    <div class="sidebar-form">
-                        <div class="input-group">
-                            <input type="text" name="q" class="form-control" placeholder="Search...">
-                            <span class="input-group-btn">
-                                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
-                            </span>
-                        </div>
-                    </div>
-                    <!-- /.search form -->
-                    <!-- sidebar menu: : style can be found in sidebar.less -->
-                    <ul class="sidebar-menu">
-                        <li class="header">MAIN NAVIGATION</li>
-                        <li class="active treeview">
-                            <a href="#">
-                                <i class="fa fa-dashboard"></i>
-                                <span>Dashboard</span>
-                                <i class="fa fa-angle-left pull-right"></i>
-                            </a>
-                            <ul class="treeview-menu">
-                                <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i>Dashboard v1</a></li>
-                                <li><a href="index2.html"><i class="fa fa-circle-o"></i>Dashboard v2</a></li>
-                            </ul>
+                     </div>
+                  </LoggedInTemplate>
+               </asp:LoginView>
+               
+               <div class="sidebar-form">
+                  <div class="input-group">
+                     <input type="text" name="q" class="form-control" placeholder="Search...">
+                     <span class="input-group-btn">
+                        <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+                     </span>
+                  </div>
+               </div>
+               <!-- /.search form -->
+               <!-- sidebar menu: : style can be found in sidebar.less -->
+               <ul class="sidebar-menu">
+                  <li class="header">MAIN NAVIGATION</li>
+                  <li class="treeview">
+                     <a href="#">
+                        <i class="fa fa-dashboard"></i>
+                        <span>Products</span>
+                        <i class="fa fa-angle-left pull-right"></i>
+                     </a>
+                     <ul class="treeview-menu">
+                        <li class="treeview">
+                           <a href="#">
+                              <i class="fa fa-dashboard"></i>
+                              <span>Components</span>
+                              <i class="fa fa-angle-left pull-right"></i>
+                           </a>
+                           <ul class="treeview-menu">
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Processors</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Motherboard</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>CPU</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>GPU</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Sound Board</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Network Card</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Chassis</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Hard Disk Drive</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Solid-state Drive</a></li>
+                              <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Other</a></li>
+                           </ul>
                         </li>
-                        <li>
-                            <a href="pages/widgets.html">
-                                <i class="fa fa-th"></i>
-                                <span>Widgets</span>
-                                <small class="label pull-right bg-green">new</small>
-                            </a>
-                        </li>
+                        <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Pre-built Computers</a></li>
+                        <li><a runat="server" href="~/"><i class="fa fa-circle-o"></i>Laptops</a></li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="pages/widgets.html">
+                        <i class="fa fa-th"></i>
+                        <span>Widgets</span>
+                        <small class="label pull-right bg-green">new</small>
+                     </a>
+                  </li>
 
-                        <li class="header">NEWSLETTER</li>
-                        <li><a><span>Subscribe to the newsletter</span></a></li>
-                    </ul>
-                </section>
-                <!-- /.sidebar -->
-            </aside>
+                  <li class="header">NEWSLETTER</li>
+                  <li><a><span>Subscribe to the newsletter</span></a></li>
+               </ul>
+            </section>
+            <!-- /.sidebar -->
+         </aside>
 
-            <div class="content-wrapper">
-                <section class="content-header">
-                    <h1>
-                        <%: Page.Title %><!--<small>Control panel</small>-->
-                    </h1>
-                    <!--<ol class="breadcrumb">
+         <div class="content-wrapper">
+            <section class="content-header">
+               <h1>
+                  <%: Page.Title %><small>PAGE</small> 
+               </h1>
+               <!--<ol class="breadcrumb">
             <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
             <li class="active">Dashboard</li>
           </ol>-->
-                </section>
+            </section>
 
-                <section class="content">
-                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                    </asp:ContentPlaceHolder>
-                </section>
+            <section class="content">
+               <asp:ContentPlaceHolder ID="MainContent" runat="server">
+               </asp:ContentPlaceHolder>
+            </section>
+         </div>
+         <footer class="main-footer">
+            <div class="pull-right hidden-xs">
+               All rights reserved
             </div>
-            <footer class="main-footer">
-                <div class="pull-right hidden-xs">
-                    All rights reserved
-                </div>
-                <strong>&copy; <%: DateTime.Now.Year %> - TechGeeks</strong>
-            </footer>
-        </div>
-        <!-- ./wrapper -->
-        <!--<div class="navbar navbar-inverse navbar-fixed-top">
+            <strong>&copy; <%: DateTime.Now.Year %> - TechGeeks</strong>
+         </footer>
+      </div>
+      <!-- ./wrapper -->
+      <!--<div class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -239,6 +273,6 @@
                 <p>&copy; <%: DateTime.Now.Year %> - TechGeeks</p>
             </footer>
         </div>-->
-    </form>
+   </form>
 </body>
 </html>

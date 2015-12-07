@@ -1,12 +1,8 @@
 ﻿<%@ Page Title="Register an external login" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="RegisterExternalLogin.aspx.cs" Inherits="TechGeeks.Account.RegisterExternalLogin" Async="true" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-<h3>Register with your <%: ProviderName %> account</h3>
-
     <asp:PlaceHolder runat="server">
-        <div class="form-horizontal">
-            <h4>Association Form</h4>
-            <hr />
+        <div class="content form-horizontal">
             <asp:ValidationSummary runat="server" ShowModelStateErrors="true" CssClass="text-danger" />
             <p class="text-info">
                 You've authenticated with <strong><%: ProviderName %></strong>. Please enter an email below for the current site
@@ -14,8 +10,8 @@
             </p>
 
             <div class="form-group">
-                <asp:Label runat="server" AssociatedControlID="email" CssClass="col-md-2 control-label">Email</asp:Label>
-                <div class="col-md-10">
+                <asp:Label runat="server" AssociatedControlID="email" CssClass="control-label">Email</asp:Label>
+                <div>
                     <asp:TextBox runat="server" ID="email" CssClass="form-control" TextMode="Email" />
                     <asp:RequiredFieldValidator runat="server" ControlToValidate="email"
                         Display="Dynamic" CssClass="text-danger" ErrorMessage="Email is required" />
@@ -24,8 +20,8 @@
             </div>
 
             <div class="form-group">
-                <div class="col-md-offset-2 col-md-10">
-                    <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" OnClick="LogIn_Click" />
+                <div>
+                    <asp:Button runat="server" Text="Log in" CssClass="btn btn-flat btn-default" OnClick="LogIn_Click" />
                 </div>
             </div>
         </div>

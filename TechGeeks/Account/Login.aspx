@@ -1,65 +1,93 @@
-﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TechGeeks.Account.Login" Async="true" %>
+﻿<%@ Page Title="Authentication" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="TechGeeks.Account.Login" Async="true" %>
 
 <%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <h2><%: Title %>.</h2>
+   <div class="row">
+      <div class="col-md-6">
+         <section id="loginForm" class="well">
+            <div class="form-horizontal">
+               <h4 class="text-center">Use a local account to log in</h4>
+               <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
+                  <p class="text-danger">
+                     <asp:Literal runat="server" ID="FailureText" />
+                  </p>
+               </asp:PlaceHolder>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
+                     <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupLogin" runat="server" ControlToValidate="Email"
+                        CssClass="text-danger" ErrorMessage="The email field is required." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
+                     <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupLogin" runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <ul class="text-right list-inline text-center">
+                     <li>
+                     <div>
+                        <asp:CheckBox runat="server" ID="RememberMe" />
+                        <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
+                     </div></li>
 
-    <div class="row">
-        <div class="col-md-8">
-            <section id="loginForm">
-                <div class="form-horizontal">
-                    <h4>Use a local account to log in.</h4>
-                    <hr />
-                    <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
-                        <p class="text-danger">
-                            <asp:Literal runat="server" ID="FailureText" />
-                        </p>
-                    </asp:PlaceHolder>
-                    <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Email" CssClass="col-md-2 control-label">Email</asp:Label>
-                        <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Email" CssClass="form-control" TextMode="Email" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Email"
-                                CssClass="text-danger" ErrorMessage="The email field is required." />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <asp:Label runat="server" AssociatedControlID="Password" CssClass="col-md-2 control-label">Password</asp:Label>
-                        <div class="col-md-10">
-                            <asp:TextBox runat="server" ID="Password" TextMode="Password" CssClass="form-control" />
-                            <asp:RequiredFieldValidator runat="server" ControlToValidate="Password" CssClass="text-danger" ErrorMessage="The password field is required." />
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <div class="checkbox">
-                                <asp:CheckBox runat="server" ID="RememberMe" />
-                                <asp:Label runat="server" AssociatedControlID="RememberMe">Remember me?</asp:Label>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="col-md-offset-2 col-md-10">
-                            <asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />
-                        </div>
-                    </div>
-                </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink" ViewStateMode="Disabled">Register as a new user</asp:HyperLink>
-                </p>
-                <p>
-                    <%-- Enable this once you have account confirmation enabled for password reset functionality
-                    <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
-                    --%>
-                </p>
-            </section>
-        </div>
+                     <li><asp:Button runat="server" ValidationGroup="groupLogin" OnClick="LogIn" Text="Log in" CssClass="btn btn-flat btn-default" /></li>
+                  </ul>
+               </div>
+            </div>
+         </section>
+         <section id="socialLoginForm" class="text-center well" >
+            <h4>Login using external provider</h4>
+            <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
+         </section>
+      </div>
 
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>
-    </div>
+      <div class="col-md-6">
+         <section id="registerForm" class="well">
+            <div class="form-horizontal">
+               <h4 class="text-center">Create a new account</h4>
+               <p class="text-danger">
+                  <asp:Literal runat="server" ID="ErrorRegister" />
+               </p>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="EmailRegister" CssClass="col-md-2 control-label">Email</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="EmailRegister" CssClass="form-control" TextMode="Email" />
+                     <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupRegister" runat="server" ControlToValidate="EmailRegister"
+                        CssClass="text-danger" ErrorMessage="The email field is required." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="PasswordRegister" CssClass="col-md-2 control-label">Password</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="PasswordRegister" TextMode="Password" CssClass="form-control" />
+                     <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupRegister" runat="server" ControlToValidate="PasswordRegister"
+                        CssClass="text-danger" ErrorMessage="The password field is required." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="ConfirmPasswordRegister" CssClass="col-md-2 control-label">Confirm password</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="ConfirmPasswordRegister" TextMode="Password" CssClass="form-control" />
+                     <asp:RequiredFieldValidator ValidationGroup="groupRegister" runat="server" ControlToValidate="ConfirmPasswordRegister"
+                        CssClass="text-danger" Display="Dynamic" ErrorMessage="The confirm password field is required." />
+                     <asp:CompareValidator ValidationGroup="groupRegister" runat="server" ControlToCompare="PasswordRegister" ControlToValidate="ConfirmPasswordRegister"
+                        CssClass="text-danger" Display="Dynamic" ErrorMessage="The password and confirmation password do not match." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <div class="col-md-offset-2 col-md-10">
+                     <asp:Button runat="server" ValidationGroup="groupRegister" OnClick="CreateUser_Click" Text="Register" CssClass="btn btn-default btn-flat" />
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+   </div>
+
 </asp:Content>

@@ -7,6 +7,9 @@ using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.Owin;
+using Owin;
+using TechGeeks.Models;
 
 namespace TechGeeks
 {
@@ -15,16 +18,7 @@ namespace TechGeeks
         private const string AntiXsrfTokenKey = "__AntiXsrfToken";
         private const string AntiXsrfUserNameKey = "__AntiXsrfUserName";
         private string _antiXsrfTokenValue;
-        protected string GetGravatarUrl(string email)
-        {
-            string hash = System.Web.Security.FormsAuthentication.HashPasswordForStoringInConfigFile(email.Trim(), "MD5");
-            hash = hash.Trim().ToLower();
-            string gravatarUrl = string.Format(
-              "http://www.gravatar.com/avatar.php?gravatar_id={0}&rating=G&size=60",
-              hash);
-            System.Diagnostics.Debug.WriteLine(email + " - "+ gravatarUrl);
-            return gravatarUrl;
-        }
+
         protected void Page_Init(object sender, EventArgs e)
         {
             // The code below helps to protect against XSRF attacks
@@ -78,7 +72,6 @@ namespace TechGeeks
 
         protected void Page_Load(object sender, EventArgs e)
         {
-
         }
 
         protected void Unnamed_LoggingOut(object sender, LoginCancelEventArgs e)

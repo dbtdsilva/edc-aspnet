@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Web;
 using System.Web.UI;
 using Microsoft.AspNet.Identity;
@@ -12,15 +13,15 @@ namespace TechGeeks.Account
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            RegisterHyperLink.NavigateUrl = "Register";
+            //RegisterHyperLink.NavigateUrl = "Register";
             // Enable this once you have account confirmation enabled for password reset functionality
             //ForgotPasswordHyperLink.NavigateUrl = "Forgot";
             OpenAuthLogin.ReturnUrl = Request.QueryString["ReturnUrl"];
             var returnUrl = HttpUtility.UrlEncode(Request.QueryString["ReturnUrl"]);
-            if (!String.IsNullOrEmpty(returnUrl))
+            /*if (!String.IsNullOrEmpty(returnUrl))
             {
                 RegisterHyperLink.NavigateUrl += "?ReturnUrl=" + returnUrl;
-            }
+            }*/
         }
 
         protected void LogIn(object sender, EventArgs e)
@@ -55,6 +56,22 @@ namespace TechGeeks.Account
                         ErrorMessage.Visible = true;
                         break;
                 }
+            }
+        }
+        protected void CreateUser_Click(object sender, EventArgs e)
+        {
+            var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
+            var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
+            var user = new ApplicationUser() { UserName = EmailRegister.Text, Email = EmailRegister.Text };
+            IdentityResult result = manager.Create(user, PasswordRegister.Text);
+            if (result.Succeeded)
+            {
+                signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
+                IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+            }
+            else
+            {
+                ErrorRegister.Text = result.Errors.FirstOrDefault();
             }
         }
     }

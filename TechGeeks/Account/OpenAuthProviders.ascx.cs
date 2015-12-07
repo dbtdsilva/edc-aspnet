@@ -35,6 +35,17 @@ namespace TechGeeks.Account
 
         public string ReturnUrl { get; set; }
 
+        public String getIcon(String item)
+        {
+            switch (item)
+            {
+                case "Google": return "fa fa-google";
+                case "Microsoft": return "fa fa-windows";
+                case "Facebook": return "fa fa-facebook";
+                case "Twitter": return "fa fa-twitter";
+                default: return "fa fa-icon";
+            }
+        }
         public IEnumerable<string> GetProviderNames()
         {
             return Context.GetOwinContext().Authentication.GetExternalAuthenticationTypes().Select(t => t.AuthenticationType);
