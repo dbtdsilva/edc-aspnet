@@ -19,6 +19,19 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+        <xs:element name="Points" type="xs:nonNegativeInteger"></xs:element>
+        <xs:element name="ShoppingCart">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Product">
+                <xs:complexType>
+                  <xs:sequence />
+                  <xs:attribute name="id" type="xs:positiveInteger" />
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
       </xs:all>
     </xs:complexType>
   </xs:element>

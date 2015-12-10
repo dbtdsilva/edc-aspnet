@@ -13,6 +13,10 @@ namespace TechGeeks
             var settings = new FriendlyUrlSettings();
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);
+
+            //routes.MapPageRoute("shop-category",
+            //    "Shop/{category}",
+            //    "~/Shop/Category.aspx");
         }
     }
 }

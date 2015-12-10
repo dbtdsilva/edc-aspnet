@@ -58,10 +58,6 @@
                      <!-- User Account: style can be found in dropdown.less -->
                      <asp:LoginView runat="server" ViewStateMode="Disabled">
                         <AnonymousTemplate>
-                           <li><a runat="server" href="~/Account/Login">Login</a></li>
-                           <li><a runat="server" href="~/Account/Login">Sign Up</a></li>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
                            <li class="dropdown messages-menu">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  <i class="fa fa-envelope-o"></i>
@@ -88,6 +84,45 @@
                                  <li class="footer"><a href="#">See All Messages</a></li>
                               </ul>
                            </li>
+                           <li><a runat="server" href="~/Account/Login">Login</a></li>
+                           <li><a runat="server" href="~/Account/Login">Sign Up</a></li>
+                        </AnonymousTemplate>
+                        <LoggedInTemplate>
+                           <asp:LoginView runat="server">
+                              <RoleGroups>
+                                 <asp:RoleGroup Roles="member">
+                                    <ContentTemplate>
+                                       <li class="dropdown messages-menu">
+                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                             <i class="fa fa-envelope-o"></i>
+                                             <span class="label label-success">4</span>
+                                          </a>
+                                          <ul class="dropdown-menu">
+                                             <li class="header">You have 4 messages</li>
+                                             <li>
+                                                <ul class="menu">
+                                                   <li>
+                                                      <a href="#">
+                                                         <div class="pull-left">
+
+                                                            <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
+                                                         </div>
+                                                         <h4>Support Team
+                                                <small><i class="fa fa-clock-o"></i>5 mins</small>
+                                                         </h4>
+                                                         <p>Why not buy a new awesome theme?</p>
+                                                      </a>
+                                                   </li>
+                                                </ul>
+                                             </li>
+                                             <li class="footer"><a href="#">See All Messages</a></li>
+                                          </ul>
+                                       </li>
+                                    </ContentTemplate>
+                                 </asp:RoleGroup>
+                              </RoleGroups>
+                           </asp:LoginView>
+
                            <li class="dropdown user user-menu">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
@@ -127,7 +162,6 @@
                            </li>
                         </LoggedInTemplate>
                      </asp:LoginView>
-
                   </ul>
                </div>
             </nav>
@@ -162,6 +196,40 @@
                <!-- sidebar menu: : style can be found in sidebar.less -->
                <ul class="sidebar-menu">
                   <li class="header">MAIN NAVIGATION</li>
+                  <asp:LoginView runat="server">
+                     <RoleGroups>
+                        <asp:RoleGroup Roles="administrator,manager">
+                           <ContentTemplate>
+                              <li class="treeview">
+                                 <a href="#">
+                                    <i class="fa fa-laptop"></i>
+                                    <span>Administration</span>
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                 </a>
+                                 <ul class="treeview-menu">
+                                    <li class="treeview"></li>
+                                    <asp:LoginView runat="server">
+                                       <RoleGroups>
+                                          <asp:RoleGroup Roles="administrator">
+                                             <ContentTemplate>
+                                                <li><a runat="server" href="~/">Users</a></li>
+                                                <li><a runat="server" href="~/">Products</a></li>
+                                             </ContentTemplate>
+                                          </asp:RoleGroup>
+                                          <asp:RoleGroup Roles="manager">
+                                             <ContentTemplate>
+                                                <li><a runat="server" href="~/">Products</a></li>
+                                             </ContentTemplate>
+                                          </asp:RoleGroup>
+                                       </RoleGroups>
+                                    </asp:LoginView>
+                                 </ul>
+                              </li>
+                           </ContentTemplate>
+                        </asp:RoleGroup>
+                     </RoleGroups>
+                  </asp:LoginView>
+
                   <li class="treeview">
                      <a href="#">
                         <i class="fa fa-laptop"></i>
@@ -176,20 +244,19 @@
                               <i class="fa fa-angle-left pull-right"></i>
                            </a>
                            <ul class="treeview-menu">
-                              <li><a runat="server" href="~/">Processors</a></li>
-                              <li><a runat="server" href="~/">Motherboard</a></li>
-                              <li><a runat="server" href="~/">CPU</a></li>
-                              <li><a runat="server" href="~/">GPU</a></li>
-                              <li><a runat="server" href="~/">Sound Board</a></li>
-                              <li><a runat="server" href="~/">Network Card</a></li>
-                              <li><a runat="server" href="~/">Chassis</a></li>
-                              <li><a runat="server" href="~/">Hard Disk Drive</a></li>
-                              <li><a runat="server" href="~/">Solid-state Drive</a></li>
-                              <li><a runat="server" href="~/">Other</a></li>
+                              <li><a runat="server" href="~/Shop/Motherboard">Motherboard</a></li>
+                              <li><a runat="server" href="~/Shop/CPU">CPU</a></li>
+                              <li><a runat="server" href="~/Shop/GPU">GPU</a></li>
+                              <li><a runat="server" href="~/Shop/Soundboard">Sound Board</a></li>
+                              <li><a runat="server" href="~/Shop/Networkcard">Network Card</a></li>
+                              <li><a runat="server" href="~/Shop/Chassis">Chassis</a></li>
+                              <li><a runat="server" href="~/Shop/HDD">Hard Disk Drive</a></li>
+                              <li><a runat="server" href="~/Shop/SDD">Solid-state Drive</a></li>
+                              <li><a runat="server" href="~/Shop/Other">Other</a></li>
                            </ul>
                         </li>
-                        <li><a runat="server" href="~/">Pre-built Computers</a></li>
-                        <li><a runat="server" href="~/">Laptops</a></li>
+                        <li><a runat="server" href="~/Shop/DesktopPC">Desktop Computers</a></li>
+                        <li><a runat="server" href="~/Shop/Laptop">Laptops</a></li>
                      </ul>
                   </li>
                   <li>
@@ -244,49 +311,6 @@
             <strong>&copy; <%: DateTime.Now.Year %> - TechGeeks</strong>
          </footer>
       </div>
-      <!-- ./wrapper -->
-      <!--<div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">TechGeeks</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Home</a></li>
-                        <li><a runat="server" href="~/About">About</a></li>
-                        <li><a runat="server" href="~/Contact">Contact</a></li>
-                    </ul>
-                    <asp:LoginView runat="server" ViewStateMode="Disabled">
-                        <AnonymousTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Shop/Checkout">Checkout</a></li>
-                                <li><a runat="server" href="~/Account/Register">Register</a></li>
-                                <li><a runat="server" href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        </AnonymousTemplate>
-                        <LoggedInTemplate>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li><a runat="server" href="~/Account/Manage" title="Manage your account"><%: Context.User.Identity.GetUserName()  %></a></li>
-                                <li>
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Log off" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                </li>
-                            </ul>
-                        </LoggedInTemplate>
-                    </asp:LoginView>
-                </div>
-            </div>
-        </div>
-        <div class="container body-content">
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - TechGeeks</p>
-            </footer>
-        </div>-->
    </form>
 </body>
 </html>

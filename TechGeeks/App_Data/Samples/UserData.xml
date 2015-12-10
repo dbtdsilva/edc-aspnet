@@ -4,4 +4,8 @@
     <Transaction bought_date="2015-04-04T19:41:00" quantity="10" product_id="1"/>
     <Transaction bought_date="2015-05-21T22:39:00" quantity="1" product_id="5"/>
   </Transactions>
+  <Points>10</Points>
+  <ShoppingCart>
+    <Product id="1"/>
+  </ShoppingCart>
 </Data>

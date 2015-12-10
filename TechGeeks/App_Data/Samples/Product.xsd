@@ -13,16 +13,32 @@
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
-        <xs:element name="Unit" minOccurs="0">
+        <xs:element name="Category" minOccurs="0">
           <xs:simpleType>
             <xs:restriction base="xs:string">
-              <xs:enumeration value="$" />
-              <xs:enumeration value="€" />
-              <xs:enumeration value="USD" />
-              <xs:enumeration value="EUR" />
+              <xs:enumeration value="Motherboard"></xs:enumeration>
+              <xs:enumeration value="CPU"></xs:enumeration>
+              <xs:enumeration value="GPU"></xs:enumeration>
+              <xs:enumeration value="Sound Board"></xs:enumeration>
+              <xs:enumeration value="Network Card"></xs:enumeration>
+              <xs:enumeration value="Chassis"></xs:enumeration>
+              <xs:enumeration value="Hard Disk Drive"></xs:enumeration>
+              <xs:enumeration value="Solid-state Drive"></xs:enumeration>
+              <xs:enumeration value="Other"></xs:enumeration>
+              <xs:enumeration value="Pre-built Computers"></xs:enumeration>
+              <xs:enumeration value="Laptops"></xs:enumeration>
             </xs:restriction>
           </xs:simpleType>
         </xs:element>
+        <xs:element name="PointsLimit" minOccurs="0" default="0">
+          <xs:simpleType>
+            <xs:restriction base="xs:nonNegativeInteger">
+              <xs:minInclusive value="0"></xs:minInclusive>
+              <xs:maxInclusive value="100"></xs:maxInclusive>
+            </xs:restriction>
+          </xs:simpleType>
+        </xs:element>
+        <xs:element name="Unit" minOccurs="0" fixed="€" type="xs:string" />
         <xs:element name="Short" type="xs:string" />
         <xs:element name="LaunchDate" type="xs:string" minOccurs="0" />
         <xs:element name="Description">
