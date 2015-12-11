@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Product>
   <Name>Intel Core i7-4710MQ</Name>
-  <Price>275.00</Price>
   <Category>CPU</Category>
+  <Price>275.00</Price>
   <PointsLimit>10</PointsLimit>
   <Short>Intel® Core™ i7-4710MQ Processor (6M Cache, up to 3.50 GHz)</Short>
   <LaunchDate>2015-04-12</LaunchDate>
