@@ -11,12 +11,11 @@ namespace TechGeeks
         public static void RegisterRoutes(RouteCollection routes)
         {
             var settings = new FriendlyUrlSettings();
+            routes.MapPageRoute("shop-category",
+                "Shop/{category}",
+                "~/Shop/Category.aspx");
             settings.AutoRedirectMode = RedirectMode.Permanent;
-            routes.EnableFriendlyUrls(settings);
-
-            //routes.MapPageRoute("shop-category",
-            //    "Shop/{category}",
-            //    "~/Shop/Category.aspx");
+            routes.EnableFriendlyUrls(settings);    
         }
     }
 }

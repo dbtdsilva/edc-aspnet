@@ -287,6 +287,7 @@
     <Content Include="Site.Mobile.Master" />
     <Content Include="Scripts\jquery-2.0.0.min.map" />
     <Content Include="Views\web.config" />
+    <Content Include="Shop\Web.config" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

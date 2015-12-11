@@ -1,16 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="TechGeeks.Shop.Category" %>
+﻿<%@ Page Title="Shop" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="TechGeeks.Shop.Category" %>
 
-<!DOCTYPE html>
-
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-    
-    </div>
-    </form>
-</body>
-</html>
+<asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+   <asp:Literal EnableViewState="false" runat="server" ID="categoryTitle"/>
+   <span>ASd</span>
+</asp:Content>
