@@ -11,7 +11,7 @@
          <asp:TemplateField HeaderText="Commands">
             <ItemTemplate>
                <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"></i></a>
-               <asp:LinkButton runat="server" CssClass="fa fa-cart-plus"></asp:LinkButton>
+               <asp:LinkButton ID="sendCheckout" runat="server" OnCommand="sendToCheckout" CommandArgument='<%# Eval("Id") %>' CssClass="fa fa-cart-plus"></asp:LinkButton>
                <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                  <div class="modal-dialog" role="document">
                    <div class="modal-content">

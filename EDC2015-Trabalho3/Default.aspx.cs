@@ -41,7 +41,7 @@ namespace EDC2015_Trabalho3
                     logo.DataBind();
                 }
 
-                Xml1.Document = feed;
+                Xml1.XPathNavigator = feed.CreateNavigator();
                 Xml1.DataBind();
 
                 for (int i = 0; i < DetailsView1.Rows.Count; i++)

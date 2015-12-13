@@ -16,8 +16,8 @@ namespace TechGeeks.Admin
         }
         private void DisplayRolesInGrid()
         {
-            RoleList.DataSource = Roles.GetAllRoles();
-            RoleList.DataBind();
+            //RoleList.DataSource = Roles.GetAllRoles();
+            //RoleList.DataBind();
         }
     }
 }

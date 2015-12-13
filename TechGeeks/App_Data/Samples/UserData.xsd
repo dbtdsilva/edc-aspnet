@@ -23,10 +23,11 @@
         <xs:element name="ShoppingCart">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Product">
+              <xs:element name="Product" minOccurs="0" maxOccurs="unbounded">
                 <xs:complexType>
                   <xs:sequence />
                   <xs:attribute name="id" type="xs:positiveInteger" />
+                  <xs:attribute name="quantity" type="xs:positiveInteger" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>

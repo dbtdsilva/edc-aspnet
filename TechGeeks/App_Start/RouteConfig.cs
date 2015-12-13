@@ -12,7 +12,7 @@ namespace TechGeeks
         {
             var settings = new FriendlyUrlSettings();
             routes.MapPageRoute("shop-category",
-                "Shop/{category}",
+                "Shop/Category/{category}",
                 "~/Shop/Category.aspx");
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);    

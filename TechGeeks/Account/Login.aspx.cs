@@ -6,6 +6,9 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Owin;
 using TechGeeks.Models;
+using System.Data.SqlClient;
+using System.Data;
+using TechGeeks.Logic;
 
 namespace TechGeeks.Account
 {

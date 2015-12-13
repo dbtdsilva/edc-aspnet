@@ -13,6 +13,24 @@ namespace TechGeeks {
     public partial class SiteMaster {
         
         /// <summary>
+        /// cartNavbar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Xml cartNavbar;
+        
+        /// <summary>
+        /// topNavbar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginView topNavbar;
+        
+        /// <summary>
         /// MainContent control.
         /// </summary>
         /// <remarks>

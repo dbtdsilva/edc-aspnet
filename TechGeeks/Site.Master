@@ -54,75 +54,16 @@
                   <span class="sr-only">Toggle navigation</span>
                </a>
                <div class="navbar-custom-menu">
-                  <ul class="nav navbar-nav">
+                  <ul class="nav navbar-nav" runat="server">
+                     <asp:Xml ID="cartNavbar" runat="server" 
+                        TransformSource="~/App_Data/Data/ShoppingCart.xslt"></asp:Xml>
                      <!-- User Account: style can be found in dropdown.less -->
-                     <asp:LoginView runat="server" ViewStateMode="Disabled">
+                     <asp:LoginView runat="server" ID="topNavbar">
                         <AnonymousTemplate>
-                           <li class="dropdown messages-menu">
-                              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                 <i class="fa fa-envelope-o"></i>
-                                 <span class="label label-success">4</span>
-                              </a>
-                              <ul class="dropdown-menu">
-                                 <li class="header">You have 4 messages</li>
-                                 <li>
-                                    <ul class="menu">
-                                       <li>
-                                          <a href="#">
-                                             <div class="pull-left">
-
-                                                <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
-                                             </div>
-                                             <h4>Support Team
-                                                <small><i class="fa fa-clock-o"></i>5 mins</small>
-                                             </h4>
-                                             <p>Why not buy a new awesome theme?</p>
-                                          </a>
-                                       </li>
-                                    </ul>
-                                 </li>
-                                 <li class="footer"><a href="#">See All Messages</a></li>
-                              </ul>
-                           </li>
                            <li><a runat="server" href="~/Account/Login">Login</a></li>
                            <li><a runat="server" href="~/Account/Login">Sign Up</a></li>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
-                           <asp:LoginView runat="server">
-                              <RoleGroups>
-                                 <asp:RoleGroup Roles="member">
-                                    <ContentTemplate>
-                                       <li class="dropdown messages-menu">
-                                          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                             <i class="fa fa-envelope-o"></i>
-                                             <span class="label label-success">4</span>
-                                          </a>
-                                          <ul class="dropdown-menu">
-                                             <li class="header">You have 4 messages</li>
-                                             <li>
-                                                <ul class="menu">
-                                                   <li>
-                                                      <a href="#">
-                                                         <div class="pull-left">
-
-                                                            <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
-                                                         </div>
-                                                         <h4>Support Team
-                                                <small><i class="fa fa-clock-o"></i>5 mins</small>
-                                                         </h4>
-                                                         <p>Why not buy a new awesome theme?</p>
-                                                      </a>
-                                                   </li>
-                                                </ul>
-                                             </li>
-                                             <li class="footer"><a href="#">See All Messages</a></li>
-                                          </ul>
-                                       </li>
-                                    </ContentTemplate>
-                                 </asp:RoleGroup>
-                              </RoleGroups>
-                           </asp:LoginView>
-
                            <li class="dropdown user user-menu">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
@@ -244,19 +185,19 @@
                               <i class="fa fa-angle-left pull-right"></i>
                            </a>
                            <ul class="treeview-menu">
-                              <li><a runat="server" href="~/Shop/Motherboard">Motherboard</a></li>
-                              <li><a runat="server" href="~/Shop/CPU">CPU</a></li>
-                              <li><a runat="server" href="~/Shop/GPU">GPU</a></li>
-                              <li><a runat="server" href="~/Shop/Soundboard">Sound Board</a></li>
-                              <li><a runat="server" href="~/Shop/Networkcard">Network Card</a></li>
-                              <li><a runat="server" href="~/Shop/Chassis">Chassis</a></li>
-                              <li><a runat="server" href="~/Shop/HDD">Hard Disk Drive</a></li>
-                              <li><a runat="server" href="~/Shop/SDD">Solid-state Drive</a></li>
-                              <li><a runat="server" href="~/Shop/Other">Other</a></li>
+                              <li><a runat="server" href="~/Shop/Category/Motherboard">Motherboard</a></li>
+                              <li><a runat="server" href="~/Shop/Category/CPU">CPU</a></li>
+                              <li><a runat="server" href="~/Shop/Category/GPU">GPU</a></li>
+                              <li><a runat="server" href="~/Shop/Category/Soundboard">Sound Board</a></li>
+                              <li><a runat="server" href="~/Shop/Category/Networkcard">Network Card</a></li>
+                              <li><a runat="server" href="~/Shop/Category/Chassis">Chassis</a></li>
+                              <li><a runat="server" href="~/Shop/Category/HDD">Hard Disk Drive</a></li>
+                              <li><a runat="server" href="~/Shop/Category/SDD">Solid-state Drive</a></li>
+                              <li><a runat="server" href="~/Shop/Category/Other">Other</a></li>
                            </ul>
                         </li>
-                        <li><a runat="server" href="~/Shop/DesktopPC">Desktop Computers</a></li>
-                        <li><a runat="server" href="~/Shop/Laptop">Laptops</a></li>
+                        <li><a runat="server" href="~/Shop/Category/DesktopPC">Desktop Computers</a></li>
+                        <li><a runat="server" href="~/Shop/Category/Laptop">Laptops</a></li>
                      </ul>
                   </li>
                   <li>
