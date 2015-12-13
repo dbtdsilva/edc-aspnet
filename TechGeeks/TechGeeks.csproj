@@ -199,6 +199,7 @@
       <SubType>Designer</SubType>
     </Content>
     <Content Include="App_Data\Samples\Product.xml" />
+    <Content Include="App_Data\Samples\Product2.xml" />
     <Content Include="App_Data\Samples\UserData.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -274,6 +275,7 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Shop\BoughtComplete.aspx" />
     <Content Include="Shop\Category.aspx" />
     <Content Include="Shop\Checkout.aspx" />
     <Content Include="Site.Master" />
@@ -399,6 +401,13 @@
       <AutoGen>True</AutoGen>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\BoughtComplete.aspx.cs">
+      <DependentUpon>BoughtComplete.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\BoughtComplete.aspx.designer.cs">
+      <DependentUpon>BoughtComplete.aspx</DependentUpon>
     </Compile>
     <Compile Include="Shop\Category.aspx.cs">
       <DependentUpon>Category.aspx</DependentUpon>

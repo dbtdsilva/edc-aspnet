@@ -107,7 +107,7 @@
         <Columns>
             <asp:TemplateField HeaderText="Register Number" SortExpression="nregister">
                 <EditItemTemplate>
-                    <asp:Label ID="TextBox1" runat="server" ReadOnly="true" Text='<%# Bind("nregister") %>'></asp:Label>
+                    <asp:Label ID="TextBox1" runat="server" Text='<%# Bind("nregister") %>'></asp:Label>
                 </EditItemTemplate>
                 <FooterTemplate>
                     <asp:TextBox ID="newOwnerRegister" CssClass="form-control input-sm" runat="server"></asp:TextBox>
