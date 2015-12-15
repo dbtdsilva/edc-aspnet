@@ -14,6 +14,9 @@ namespace TechGeeks
             routes.MapPageRoute("shop-category",
                 "Shop/Category/{category}",
                 "~/Shop/Category.aspx");
+            routes.MapPageRoute("shop-reviews",
+                "Shop/Reviews/{productid}",
+                "~/Shop/Reviews.aspx");
             settings.AutoRedirectMode = RedirectMode.Permanent;
             routes.EnableFriendlyUrls(settings);    
         }

@@ -26,8 +26,9 @@ namespace TechGeeks.Account
                 string data = (GridView1.Rows[e.RowIndex].FindControl("data") as TextBox).Text;
                 if (data == null || data.Length == 0)
                     return;
+      
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ProductId", 4);
+                cmd.Parameters.AddWithValue("@ProductId", GridView1.Rows[e.RowIndex].Cells[2].Text);
                 cmd.Parameters.AddWithValue("@UserId", Context.User.Identity.GetUserId());
                 cmd.Parameters.AddWithValue("@Review", data);
                 con.Open();

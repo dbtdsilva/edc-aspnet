@@ -28,3 +28,7 @@
     width: auto;
     display: inline;
 }
+
+.textarea-noresize {
+    resize: vertical;
+}

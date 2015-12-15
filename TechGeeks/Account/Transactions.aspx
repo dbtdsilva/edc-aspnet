@@ -9,10 +9,11 @@
          <asp:BoundField DataField="Product_id" HeaderText="Product ID" SortExpression="Product_id" />
          <asp:BoundField DataField="Product_name" HeaderText="Product Name" SortExpression="Product_id" />
          <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
-         <asp:TemplateField>
+         <asp:TemplateField HeaderText="Feedback">
             <ItemTemplate>
-               <a href="#" data-toggle="modal" data-target='#modal<%# Eval("TransactionId") %>'><i class="fa fa-plus-circle"></i></a>
-               
+               <a href="#" data-toggle="modal" data-target='#modal<%# Eval("TransactionId") %>'><i class="fa fa-star"></i>&nbsp;Submit</a>
+               &nbsp;<a runat="server" href='<%# String.Format("~/Shop/Reviews/{0}", Eval("Product_id")) %>' data-toggle="modal"><i class="fa fa-comment"></i>&nbsp;View</a>
+
                <div class="modal fade" id='modal<%# Eval("TransactionId") %>' tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                  <div class="modal-dialog" role="document">
                    <div class="modal-content">
@@ -21,11 +22,12 @@
                         <asp:Label ID="Label2" CssClass="h4 text-center" runat="server" Text='Feedback Modal'></asp:Label>
                      </div>
                      <div class="modal-body">
-                       <asp:TextBox ID='data' runat="server" TextMode="MultiLine"></asp:TextBox>
+                       <asp:TextBox ID='data' CssClass="form-control textarea-noresize" Height="300px" Wrap="true" 
+                          runat="server" TextMode="MultiLine"></asp:TextBox>
                      </div>
                      <div class="modal-footer">
                        <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
-                        <asp:LinkButton runat="server" CssClass="btn btn-flat btn-primary" CommandName="Update" CommandArgument='<%# Eval("TransactionId") %>'><i class="fa fa-floppy-o"></i>Save Changes</asp:LinkButton>
+                        <asp:LinkButton runat="server" CssClass="btn btn-flat btn-primary" CommandName="Update"><i class="fa fa-floppy-o"></i>&nbsp;Save Changes</asp:LinkButton>
                      </div>
                    </div>
                  </div>

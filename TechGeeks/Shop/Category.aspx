@@ -16,7 +16,7 @@
             <ItemTemplate>
                <a href="#" data-toggle="modal" data-target="#modal<%# Eval("Id") %>"><i class="fa fa-plus-circle"></i></a>
                <asp:LinkButton ID="sendCheckout" runat="server" OnCommand="sendToCheckout" CommandArgument='<%# Eval("Id") %>' CssClass="fa fa-cart-plus"></asp:LinkButton>
-               
+               <a runat="server" href='<%# String.Format("~/Shop/Reviews/{0}", Eval("Id")) %>'><i class="fa fa-comment"></i></a>
                <div class="modal fade" id="modal<%# Eval("Id") %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                  <div class="modal-dialog" role="document">
                    <div class="modal-content">

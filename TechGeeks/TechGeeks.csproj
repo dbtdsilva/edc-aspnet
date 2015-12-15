@@ -251,6 +251,7 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Shop\Reviews.aspx" />
     <Content Include="WebServices\Feeds.asmx" />
     <Content Include="WebServices\GetDump.asmx" />
     <None Include="App_Data\Samples\Product.xsd">
@@ -488,6 +489,13 @@
     </Compile>
     <Compile Include="Shop\Checkout.aspx.designer.cs">
       <DependentUpon>Checkout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Shop\Reviews.aspx.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Shop\Reviews.aspx.designer.cs">
+      <DependentUpon>Reviews.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
