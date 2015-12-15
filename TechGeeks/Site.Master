@@ -147,8 +147,9 @@
                                        <RoleGroups>
                                           <asp:RoleGroup Roles="administrator">
                                              <ContentTemplate>
-                                                <li><a runat="server" href="~/">Users</a></li>
+                                                <li><a runat="server" href="~/Admin/ManageRoles">Roles</a></li>
                                                 <li><a runat="server" href="~/Admin/ManageProducts">Products</a></li>
+                                                <li><a runat="server" href="~/Admin/ManageNewsletter">Newsletter</a></li>
                                              </ContentTemplate>
                                           </asp:RoleGroup>
                                           <asp:RoleGroup Roles="manager">
@@ -215,9 +216,10 @@
                   </div>
                   <div class="sidebar-form">
                      <div class="input-group">
-                        <input type="text" name="q" class="form-control input-sm" placeholder="Enter your email..">
+                        <input runat="server" id="emailSubscriber" type="text" name="q" class="form-control input-sm" placeholder="Enter your email..">
                         <span class="input-group-btn">
-                           <button type="submit" name="news" id="news-btn" class="btn btn-sm btn-flat"><i class="fa fa-newspaper-o"></i></button>
+                           <asp:LinkButton ID="subscribeBtn" OnClick="subscribeBtn_Click" runat="server" 
+                              CssClass="btn btn-sm-btn-flat"><i class="fa fa-newspaper-o"></i></asp:LinkButton>
                         </span>
                      </div>
                   </div>

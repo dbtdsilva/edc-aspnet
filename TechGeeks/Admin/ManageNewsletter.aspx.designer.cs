@@ -7,54 +7,54 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechGeeks {
+namespace TechGeeks.Admin {
     
     
-    public partial class SiteMaster {
+    public partial class ManageNewsletter {
         
         /// <summary>
-        /// cartNavbar control.
+        /// emailContent control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Xml cartNavbar;
+        protected global::System.Web.UI.WebControls.TextBox emailContent;
         
         /// <summary>
-        /// topNavbar control.
+        /// sendEmailsBtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView topNavbar;
+        protected global::System.Web.UI.WebControls.LinkButton sendEmailsBtn;
         
         /// <summary>
-        /// emailSubscriber control.
+        /// emailMessage control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText emailSubscriber;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl emailMessage;
         
         /// <summary>
-        /// subscribeBtn control.
+        /// GridView1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton subscribeBtn;
+        protected global::System.Web.UI.WebControls.GridView GridView1;
         
         /// <summary>
-        /// MainContent control.
+        /// XmlDataSourceNewsletter control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.XmlDataSource XmlDataSourceNewsletter;
     }
 }
