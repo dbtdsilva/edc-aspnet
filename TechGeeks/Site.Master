@@ -137,7 +137,7 @@
                            <ContentTemplate>
                               <li class="treeview">
                                  <a href="#">
-                                    <i class="fa fa-laptop"></i>
+                                    <i class="fa fa-cog"></i>
                                     <span>Administration</span>
                                     <i class="fa fa-angle-left pull-right"></i>
                                  </a>
