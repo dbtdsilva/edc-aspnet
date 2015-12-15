@@ -187,6 +187,7 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="Account\Confirm.aspx" />
+    <Content Include="Account\EditProfile.aspx" />
     <Content Include="Account\Lockout.aspx" />
     <Content Include="Account\Login.aspx" />
     <Content Include="Account\ManagePassword.aspx" />
@@ -324,6 +325,13 @@
     <Compile Include="Account\Confirm.aspx.designer.cs">
       <DependentUpon>Confirm.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Account\EditProfile.aspx.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\EditProfile.aspx.designer.cs">
+      <DependentUpon>EditProfile.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Account\Lockout.aspx.cs">
       <DependentUpon>Lockout.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -417,6 +425,15 @@
     </Compile>
     <Compile Include="Logic\RoleAction.cs" />
     <Compile Include="Logic\ShoppingCart.cs" />
+    <Compile Include="Migrations\201512031842573_InitialCreate.cs" />
+    <Compile Include="Migrations\201512031842573_InitialCreate.Designer.cs">
+      <DependentUpon>201512031842573_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201512151439138_UserFields.cs" />
+    <Compile Include="Migrations\201512151439138_UserFields.Designer.cs">
+      <DependentUpon>201512151439138_UserFields.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">
@@ -482,6 +499,14 @@
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\GetDump\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201512031842573_InitialCreate.resx">
+      <DependentUpon>201512031842573_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201512151439138_UserFields.resx">
+      <DependentUpon>201512151439138_UserFields.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -49,9 +49,31 @@ namespace TechGeeks.Admin
             }
         }
 
-        protected void UserRoleGrid_ItemUpdating(object sender, DetailsViewUpdateEventArgs e)
+
+        protected void UserRoleGrid_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
+            if (UserRoleGrid.Rows[e.RowIndex].RowType == DataControlRowType.DataRow)
+            {
+                if ((UserRoleGrid.Rows[e.RowIndex].RowState & DataControlRowState.Edit) > 0)
+                {
+                    DropDownList ddList = (DropDownList)UserRoleGrid.Rows[e.RowIndex].FindControl("DropDownList1");
+                    //ddList.SelectedValue.ToString()
+                    var myRow = (Label)UserRoleGrid.Rows[e.RowIndex].FindControl("email");
+
+                    string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    SqlConnection con = new SqlConnection(constring);
+                    using (SqlCommand cmd = new SqlCommand("sp_updateUserRole", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@email", myRow.Text.ToString());
+                        cmd.Parameters.AddWithValue("@role", ddList.SelectedValue.ToString());
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
             e.Cancel = true;
+            Response.Redirect(Request.RawUrl);
         }
     }
 }

@@ -100,7 +100,33 @@ namespace TechGeeks.Account
             }
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().GetUserManager<ApplicationSignInManager>();
-            var user = new ApplicationUser() { UserName = email.Text, Email = email.Text };
+            DateTime dateValue;
+            bool noDate = false;
+            if (!DateTime.TryParse(BirthdayRegister.Text, out dateValue))
+                noDate = true;
+            ApplicationUser user;
+            
+            if (noDate)
+            {
+                user = new ApplicationUser()
+                {
+                    UserName = email.Text,
+                    Email = email.Text,
+                    NIF = NIFRegister.Text,
+                    FullName = FullNameRegister.Text
+                };
+            }
+            else
+            {
+                user = new ApplicationUser()
+                {
+                    UserName = email.Text,
+                    Email = email.Text,
+                    BirthDate = dateValue,
+                    NIF = NIFRegister.Text,
+                    FullName = FullNameRegister.Text
+                };
+            }
             IdentityResult result = manager.Create(user);
             if (result.Succeeded)
             {

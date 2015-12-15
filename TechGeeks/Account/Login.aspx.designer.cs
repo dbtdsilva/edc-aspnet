@@ -85,6 +85,15 @@ namespace TechGeeks.Account {
         protected global::System.Web.UI.WebControls.Literal ErrorRegister;
         
         /// <summary>
+        /// FullNameRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox FullNameRegister;
+        
+        /// <summary>
         /// EmailRegister control.
         /// </summary>
         /// <remarks>
@@ -92,6 +101,24 @@ namespace TechGeeks.Account {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox EmailRegister;
+        
+        /// <summary>
+        /// BirthdayRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox BirthdayRegister;
+        
+        /// <summary>
+        /// NIFRegister control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox NIFRegister;
         
         /// <summary>
         /// PasswordRegister control.

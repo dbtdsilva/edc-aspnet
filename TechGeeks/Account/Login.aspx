@@ -55,11 +55,31 @@
                   <asp:Literal runat="server" ID="ErrorRegister" />
                </p>
                <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="FullNameRegister" CssClass="col-md-2 control-label">Name</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="FullNameRegister" CssClass="form-control" TextMode="SingleLine" />
+                     <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupRegister" runat="server" ControlToValidate="FullNameRegister"
+                        CssClass="text-danger" ErrorMessage="Full name is required." />
+                  </div>
+               </div>
+               <div class="form-group">
                   <asp:Label runat="server" AssociatedControlID="EmailRegister" CssClass="col-md-2 control-label">Email</asp:Label>
                   <div class="col-md-10">
                      <asp:TextBox runat="server" ID="EmailRegister" CssClass="form-control" TextMode="Email" />
                      <asp:RequiredFieldValidator Display="Dynamic" ValidationGroup="groupRegister" runat="server" ControlToValidate="EmailRegister"
                         CssClass="text-danger" ErrorMessage="The email field is required." />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="BirthdayRegister" CssClass="col-md-2 control-label">Birthday</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="BirthdayRegister" CssClass="form-control" TextMode="Date" />
+                  </div>
+               </div>
+               <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="NIFRegister" CssClass="col-md-2 control-label">NIF</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="NIFRegister" CssClass="form-control" TextMode="Number" />
                   </div>
                </div>
                <div class="form-group">
