@@ -147,9 +147,10 @@
                                        <RoleGroups>
                                           <asp:RoleGroup Roles="administrator">
                                              <ContentTemplate>
+                                                <li><a runat="server" href="~/Admin/ManageFeeds">Feeds</a></li>
+                                                <li><a runat="server" href="~/Admin/ManageNewsletter">Newsletter</a></li>
                                                 <li><a runat="server" href="~/Admin/ManageRoles">Roles</a></li>
                                                 <li><a runat="server" href="~/Admin/ManageProducts">Products</a></li>
-                                                <li><a runat="server" href="~/Admin/ManageNewsletter">Newsletter</a></li>
                                              </ContentTemplate>
                                           </asp:RoleGroup>
                                           <asp:RoleGroup Roles="manager">
@@ -196,7 +197,7 @@
                      </ul>
                   </li>
                   <li>
-                     <a runat="server" href="~/">
+                     <a runat="server" href="~/Feeds">
                         <i class="fa fa-rss"></i>
                         <span>Tech News</span>
                      </a>

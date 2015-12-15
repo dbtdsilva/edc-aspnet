@@ -194,6 +194,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\Transactions.aspx" />
+    <Content Include="Admin\ManageFeeds.aspx" />
     <Content Include="Admin\ManageNewsletter.aspx" />
     <Content Include="Admin\ManageProducts.aspx" />
     <Content Include="Admin\ManageRoles.aspx" />
@@ -218,6 +219,7 @@
     <Content Include="Content\font-awesome.css" />
     <Content Include="Content\font-awesome.min.css" />
     <Content Include="Content\skin.min.css" />
+    <Content Include="Feeds.aspx" />
     <Content Include="Fonts\fontawesome-webfont.svg" />
     <Content Include="Fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Fonts\glyphicons-halflings-regular.woff" />
@@ -374,6 +376,13 @@
     <Compile Include="Account\Transactions.aspx.designer.cs">
       <DependentUpon>Transactions.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Admin\ManageFeeds.aspx.cs">
+      <DependentUpon>ManageFeeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageFeeds.aspx.designer.cs">
+      <DependentUpon>ManageFeeds.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin\ManageNewsletter.aspx.cs">
       <DependentUpon>ManageNewsletter.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -419,6 +428,13 @@
     </Compile>
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Feeds.aspx.cs">
+      <DependentUpon>Feeds.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Feeds.aspx.designer.cs">
+      <DependentUpon>Feeds.aspx</DependentUpon>
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
