@@ -215,16 +215,16 @@
             <div class="col-md-6">
                <b>Example JSON:</b>
                <code><br />
-                  [<br />
-                     &nbsp;&nbsp;&nbsp;{<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Name':'...',<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Price': ..,<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Short': '..,<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br />
-                     &nbsp;&nbsp;&nbsp;},{<br />
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..<br />
+                  {<br />
+                     &nbsp;&nbsp;&nbsp;"List": {<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"Product": [{<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;'Name':'...',<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;},{<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;..<br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]<br />
                      &nbsp;&nbsp;&nbsp;}<br />
-                  ]
+                  }
                </code>
             </div>
          </div>

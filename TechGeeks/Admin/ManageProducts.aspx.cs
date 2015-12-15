@@ -10,6 +10,7 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Xml;
+using TechGeeks.WebServices;
 
 namespace TechGeeks.Admin
 {
@@ -161,7 +162,17 @@ namespace TechGeeks.Admin
 
         protected void exportBtn_Click(object sender, EventArgs e)
         {
-
+            GetDump service = new GetDump();
+            if (exportType.SelectedValue.CompareTo("json") == 0) {
+                Response.AddHeader("Content-Disposition", "attachment; filename=dump.json");
+                Response.Write(service.GetProductsJSON());
+                Response.ContentType = "application/json";
+            } else {
+                Response.AddHeader("Content-Disposition", "attachment; filename=dump.xml");
+                Response.Write(service.GetProductsXML().OuterXml);
+                Response.ContentType = "application/xml";
+            }
+            Response.End();
         }
     }
 }
