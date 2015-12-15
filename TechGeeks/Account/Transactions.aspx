@@ -2,7 +2,7 @@
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource1" 
-      GridLines="None" AllowPaging="True" AllowSorting="True" CssClass="table table-condensed" OnRowCommand="GridView1_RowCommand">
+      GridLines="None" AllowPaging="True" AllowSorting="True" CssClass="table table-condensed" OnRowUpdating="GridView1_RowUpdating">
       <Columns>
          <asp:BoundField DataField="TransactionId" HeaderText="ID" SortExpression="TransactionId" />
          <asp:BoundField DataField="Bought_date" HeaderText="Bought at" SortExpression="Bought_date" />
@@ -25,7 +25,7 @@
                      </div>
                      <div class="modal-footer">
                        <button type="button" class="btn btn-flat btn-default" data-dismiss="modal">Close</button>
-                        <asp:LinkButton runat="server" CssClass="btn btn-flat btn-primary" CommandName="Feedback" CommandArgument='<%# Eval("TransactionId") %>'><i class="fa fa-floppy-o"></i>Save Changes</asp:LinkButton>
+                        <asp:LinkButton runat="server" CssClass="btn btn-flat btn-primary" CommandName="Update" CommandArgument='<%# Eval("TransactionId") %>'><i class="fa fa-floppy-o"></i>Save Changes</asp:LinkButton>
                      </div>
                    </div>
                  </div>
