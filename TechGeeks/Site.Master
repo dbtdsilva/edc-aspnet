@@ -81,7 +81,7 @@
                                  <!-- Menu Body -->
                                  <li class="user-body">
                                     <div class="text-center">
-                                       <a runat="server" class="btn btn-default btn-flat" href="~/Account/ManagePassword">Manage Password</a>
+                                       <a runat="server" class="btn btn-default btn-flat" href="~/Account/EditProfile">Edit Profile/Manage Password</a>
                                     </div>
                                  </li>
                                  <!-- Menu Footer-->
