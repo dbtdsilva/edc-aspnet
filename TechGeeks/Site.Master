@@ -201,7 +201,7 @@
                      </a>
                   </li>
                   <li>
-                     <a runat="server" href="~/">
+                     <a runat="server" href="~/About">
                         <i class="fa fa-globe"></i>
                         <span>About us</span>
                      </a>
