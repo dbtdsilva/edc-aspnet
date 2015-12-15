@@ -23,3 +23,8 @@
     padding: 0px 10px;
     color:#b8c7ce;
 }
+
+.custom-form {
+    width: auto;
+    display: inline;
+}

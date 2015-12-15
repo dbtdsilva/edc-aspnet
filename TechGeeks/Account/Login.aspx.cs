@@ -9,6 +9,7 @@ using TechGeeks.Models;
 using System.Data.SqlClient;
 using System.Data;
 using TechGeeks.Logic;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace TechGeeks.Account
 {
@@ -48,7 +49,7 @@ namespace TechGeeks.Account
                         Response.Redirect("/Account/Lockout");
                         break;
                     case SignInStatus.RequiresVerification:
-                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}", 
+                        Response.Redirect(String.Format("/Account/TwoFactorAuthenticationSignIn?ReturnUrl={0}&RememberMe={1}",
                                                         Request.QueryString["ReturnUrl"],
                                                         RememberMe.Checked),
                                           true);
@@ -63,12 +64,21 @@ namespace TechGeeks.Account
         }
         protected void CreateUser_Click(object sender, EventArgs e)
         {
+            Models.ApplicationDbContext context = new ApplicationDbContext();
+            IdentityResult IdUserResult;
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleMgr = new RoleManager<IdentityRole>(roleStore);
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
             var manager = Context.GetOwinContext().GetUserManager<ApplicationUserManager>();
             var signInManager = Context.GetOwinContext().Get<ApplicationSignInManager>();
             var user = new ApplicationUser() { UserName = EmailRegister.Text, Email = EmailRegister.Text };
             IdentityResult result = manager.Create(user, PasswordRegister.Text);
             if (result.Succeeded)
             {
+                if (!userMgr.IsInRole(user.Id, "member"))
+                    IdUserResult = userMgr.AddToRole(user.Id, "member");
+
                 signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
             }

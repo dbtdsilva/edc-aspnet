@@ -7,12 +7,17 @@
          <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
          <asp:BoundField DataField="Price" HeaderText="Price" SortExpression="Price" />
          <asp:BoundField DataField="Short" HeaderText="Short" SortExpression="Short" />
-         <asp:BoundField DataField="LaunchDate" HeaderText="LaunchDate" SortExpression="LaunchDate" />
+         <asp:TemplateField HeaderText="LaunchDate" SortExpression="LaunchDate">
+            <ItemTemplate>
+               <asp:Label ID="Label8" runat="server" Text='<%# Eval("LaunchDate").ToString().Substring(0,8) %>'></asp:Label>
+            </ItemTemplate>
+         </asp:TemplateField>
          <asp:TemplateField HeaderText="Commands">
             <ItemTemplate>
-               <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-plus-circle"></i></a>
+               <a href="#" data-toggle="modal" data-target="#modal<%# Eval("Id") %>"><i class="fa fa-plus-circle"></i></a>
                <asp:LinkButton ID="sendCheckout" runat="server" OnCommand="sendToCheckout" CommandArgument='<%# Eval("Id") %>' CssClass="fa fa-cart-plus"></asp:LinkButton>
-               <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               
+               <div class="modal fade" id="modal<%# Eval("Id") %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                  <div class="modal-dialog" role="document">
                    <div class="modal-content">
                      <div class="modal-header">

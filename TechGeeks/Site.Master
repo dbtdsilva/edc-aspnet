@@ -148,12 +148,12 @@
                                           <asp:RoleGroup Roles="administrator">
                                              <ContentTemplate>
                                                 <li><a runat="server" href="~/">Users</a></li>
-                                                <li><a runat="server" href="~/">Products</a></li>
+                                                <li><a runat="server" href="~/Admin/ManageProducts">Products</a></li>
                                              </ContentTemplate>
                                           </asp:RoleGroup>
                                           <asp:RoleGroup Roles="manager">
                                              <ContentTemplate>
-                                                <li><a runat="server" href="~/">Products</a></li>
+                                                <li><a runat="server" href="~/Admin/ManageProducts">Products</a></li>
                                              </ContentTemplate>
                                           </asp:RoleGroup>
                                        </RoleGroups>

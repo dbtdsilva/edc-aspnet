@@ -5,6 +5,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using Owin;
 using TechGeeks.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace TechGeeks.Account
 {
@@ -78,8 +79,8 @@ namespace TechGeeks.Account
                     email.Text = loginInfo.Email;
                 }
             }
-        }        
-        
+        }
+
         protected void LogIn_Click(object sender, EventArgs e)
         {
             CreateAndLoginUser();
@@ -87,6 +88,12 @@ namespace TechGeeks.Account
 
         private void CreateAndLoginUser()
         {
+            Models.ApplicationDbContext context = new ApplicationDbContext();
+            IdentityResult IdUserResult;
+            var roleStore = new RoleStore<IdentityRole>(context);
+            var roleMgr = new RoleManager<IdentityRole>(roleStore);
+            var userMgr = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
             if (!IsValid)
             {
                 return;
@@ -97,6 +104,9 @@ namespace TechGeeks.Account
             IdentityResult result = manager.Create(user);
             if (result.Succeeded)
             {
+                if (!userMgr.IsInRole(user.Id, "member"))
+                    IdUserResult = userMgr.AddToRole(user.Id, "member");
+
                 var loginInfo = Context.GetOwinContext().Authentication.GetExternalLoginInfo();
                 if (loginInfo == null)
                 {
@@ -119,9 +129,9 @@ namespace TechGeeks.Account
             AddErrors(result);
         }
 
-        private void AddErrors(IdentityResult result) 
+        private void AddErrors(IdentityResult result)
         {
-            foreach (var error in result.Errors) 
+            foreach (var error in result.Errors)
             {
                 ModelState.AddModelError("", error);
             }

@@ -193,7 +193,7 @@
             </div>
         <div class="col-log-9 col-md-9">
             <asp:TextBox ID="taxNumber" runat="server"></asp:TextBox>&nbsp;&nbsp;&nbsp;   
-            <asp:Button ID="search" CssClass="btn btn-md btn-success" runat="server" Text="Search" AutoPostBack="True" OnClick="search_Click"/>
+            <asp:Button ID="search" CssClass="btn btn-md btn-success" runat="server" Text="Search" OnClick="search_Click"/>
         </div>
     </div>
     <div class="col-log-12 col-md-12" style="height:20px;"></div>

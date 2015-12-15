@@ -191,6 +191,7 @@
     <Content Include="Account\OpenAuthProviders.ascx" />
     <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Account\Transactions.aspx" />
+    <Content Include="Admin\ManageProducts.aspx" />
     <Content Include="Admin\ManageRoles.aspx" />
     <Content Include="App_Data\aspnet-TechGeeks-20151203044817.mdf" />
     <Content Include="App_Data\aspnet-TechGeeks-20151203044817_log.ldf" />
@@ -199,6 +200,7 @@
     </Content>
     <Content Include="App_Data\Samples\Product.xml" />
     <Content Include="App_Data\Samples\Product2.xml" />
+    <Content Include="App_Data\Samples\ProductList.xml" />
     <Content Include="App_Data\Samples\UserData.xml">
       <SubType>Designer</SubType>
     </Content>
@@ -232,6 +234,8 @@
     <None Include="App_Data\Samples\Product.xsd">
       <SubType>Designer</SubType>
     </None>
+    <Content Include="App_Data\Samples\Product1.json" />
+    <Content Include="App_Data\Samples\ProductList.json" />
     <None Include="App_Data\Samples\UserData.xsd">
       <SubType>Designer</SubType>
     </None>
@@ -349,6 +353,13 @@
     </Compile>
     <Compile Include="Account\Transactions.aspx.designer.cs">
       <DependentUpon>Transactions.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\ManageProducts.aspx.designer.cs">
+      <DependentUpon>ManageProducts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Admin\ManageRoles.aspx.cs">
       <DependentUpon>ManageRoles.aspx</DependentUpon>

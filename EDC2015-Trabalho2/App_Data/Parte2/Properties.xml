@@ -88,4 +88,12 @@
     <value cost="352650" currency="€" />
     <address city="Albufeira" street="Rua da Oura" port="3" />
   </property>
+  <property type="house" nregister="115145">
+    <value cost="352650" currency="€" />
+    <address city="asd" street="asdw" port="4" />
+  </property>
+  <property type="" nregister="">
+    <value cost="" currency="" />
+    <address city="" street="" port="" />
+  </property>
 </properties>

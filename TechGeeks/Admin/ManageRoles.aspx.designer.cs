@@ -7,18 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechGeeks.Admin {
-    
-    
-    public partial class ManageRoles {
-        
+namespace TechGeeks.Admin
+{
+
+
+    public partial class ManageRoles
+    {
+
         /// <summary>
-        /// RoleList control.
+        /// UserRoleGrid control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView RoleList;
+        protected global::System.Web.UI.WebControls.GridView UserRoleGrid;
+
+        /// <summary>
+        /// SqlDataSource1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource1;
     }
 }
