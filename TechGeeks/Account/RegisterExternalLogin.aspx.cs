@@ -51,8 +51,9 @@ namespace TechGeeks.Account
                 if (user != null)
                 {
                     signInManager.SignIn(user, isPersistent: false, rememberBrowser: false);
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    Response.Redirect("~");
                 }
+
                 else if (User.Identity.IsAuthenticated)
                 {
                     // Apply Xsrf check when linking
@@ -66,7 +67,7 @@ namespace TechGeeks.Account
                     var result = manager.AddLogin(User.Identity.GetUserId(), verifiedloginInfo.Login);
                     if (result.Succeeded)
                     {
-                        IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                        Response.Redirect("~");
                     }
                     else
                     {
@@ -147,8 +148,8 @@ namespace TechGeeks.Account
                     // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
                     // var code = manager.GenerateEmailConfirmationToken(user.Id);
                     // Send this link via email: IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id)
-
-                    IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+                    
+                    Response.Redirect("~");
                     return;
                 }
             }

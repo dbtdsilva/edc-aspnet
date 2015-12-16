@@ -9,7 +9,7 @@
          <asp:BoundField DataField="Short" HeaderText="Short" SortExpression="Short" />
          <asp:TemplateField HeaderText="LaunchDate" SortExpression="LaunchDate">
             <ItemTemplate>
-               <asp:Label ID="Label8" runat="server" Text='<%# Eval("LaunchDate").ToString().Substring(0,8) %>'></asp:Label>
+               <asp:Label ID="Label8" runat="server" Text='<%# Eval("LaunchDate").ToString().Substring(0,10) %>'></asp:Label>
             </ItemTemplate>
          </asp:TemplateField>
          <asp:TemplateField HeaderText="Commands">

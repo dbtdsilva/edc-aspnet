@@ -22,43 +22,50 @@ namespace TechGeeks.Admin
 
         protected void InsertButton_Click(object sender, EventArgs e)
         {
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            using (SqlCommand cmd = new SqlCommand("sp_insertProduct", con))
+            try
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Name", (GridView1.FooterRow.FindControl("newName") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@Category", (GridView1.FooterRow.FindControl("newCategory") as DropDownList).SelectedValue);
-                cmd.Parameters.AddWithValue("@PointsLimit", (GridView1.FooterRow.FindControl("newPointsLimit") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@Price", (GridView1.FooterRow.FindControl("newPrice") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@Short", (GridView1.FooterRow.FindControl("newShort") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@LaunchDate", (GridView1.FooterRow.FindControl("newLaunchDate") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@Description", "");
-                con.Open();
-                cmd.ExecuteNonQuery();
+                string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_insertProduct", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Name", (GridView1.FooterRow.FindControl("newName") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@Category", (GridView1.FooterRow.FindControl("newCategory") as DropDownList).SelectedValue);
+                    cmd.Parameters.AddWithValue("@PointsLimit", (GridView1.FooterRow.FindControl("newPointsLimit") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@Price", (GridView1.FooterRow.FindControl("newPrice") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@Short", (GridView1.FooterRow.FindControl("newShort") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@LaunchDate", (GridView1.FooterRow.FindControl("newLaunchDate") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@Description", "");
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception) { }
             Response.Redirect(Request.RawUrl);
         }
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            using (SqlCommand cmd = new SqlCommand("sp_updateProduct", con))
+            try
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@id", GridView1.DataKeys[e.RowIndex].Value);
-                cmd.Parameters.AddWithValue("@Name", e.NewValues["Name"]);
-                cmd.Parameters.AddWithValue("@Category", e.NewValues["Category"]);
-                cmd.Parameters.AddWithValue("@PointsLimit", e.NewValues["PointsLimit"] == null ? 0 : e.NewValues["PointsLimit"]);
-                cmd.Parameters.AddWithValue("@Price", e.NewValues["Price"]);
-                cmd.Parameters.AddWithValue("@Short", e.NewValues["Short"] == null ? "" : e.NewValues["Short"]);
-                cmd.Parameters.AddWithValue("@LaunchDate", e.NewValues["LaunchDate"]);
-                cmd.Parameters.AddWithValue("@Description", e.OldValues["Description"] == null ? "" : e.OldValues["Description"]);
-                con.Open();
-                cmd.ExecuteNonQuery();
+                string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_updateProduct", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@id", GridView1.DataKeys[e.RowIndex].Value);
+                    cmd.Parameters.AddWithValue("@Name", e.NewValues["Name"]);
+                    cmd.Parameters.AddWithValue("@Category", e.NewValues["Category"]);
+                    cmd.Parameters.AddWithValue("@PointsLimit", e.NewValues["PointsLimit"] == null ? 0 : e.NewValues["PointsLimit"]);
+                    cmd.Parameters.AddWithValue("@Price", e.NewValues["Price"]);
+                    cmd.Parameters.AddWithValue("@Short", e.NewValues["Short"] == null ? "" : e.NewValues["Short"]);
+                    cmd.Parameters.AddWithValue("@LaunchDate", e.NewValues["LaunchDate"]);
+                    cmd.Parameters.AddWithValue("@Description", e.OldValues["Description"] == null ? "" : e.OldValues["Description"]);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
-
+            catch (Exception) { }
             e.Cancel = true;
             Response.Redirect(Request.RawUrl);
         }

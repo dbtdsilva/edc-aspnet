@@ -177,17 +177,21 @@ namespace TechGeeks
 
         protected void subscribeBtn_Click(object sender, EventArgs e)
         {
-            string email = emailSubscriber.Value;
-            string constring = System.Configuration.ConfigurationManager.
-                ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            using (SqlCommand cmd = new SqlCommand("sp_insertEmailNewsletter", con))
+            try
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@email", email);
-                con.Open();
-                cmd.ExecuteNonQuery();
+                string email = emailSubscriber.Value;
+                string constring = System.Configuration.ConfigurationManager.
+                    ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_insertEmailNewsletter", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@email", email);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception) { }
             Response.Redirect(Request.RawUrl);
         }
 

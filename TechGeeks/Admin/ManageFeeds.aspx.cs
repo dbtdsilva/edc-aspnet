@@ -35,16 +35,20 @@ namespace TechGeeks.Admin
 
         protected void InsertButton_Click(object sender, EventArgs e)
         {
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            using (SqlCommand cmd = new SqlCommand("sp_insertRSSFeed", con))
+            try
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@rss", (GridView1.FooterRow.FindControl("newUrl") as TextBox).Text);
-                cmd.Parameters.AddWithValue("@title", (GridView1.FooterRow.FindControl("newTitle") as TextBox).Text);
-                con.Open();
-                cmd.ExecuteNonQuery();
+                string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_insertRSSFeed", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@rss", (GridView1.FooterRow.FindControl("newUrl") as TextBox).Text);
+                    cmd.Parameters.AddWithValue("@title", (GridView1.FooterRow.FindControl("newTitle") as TextBox).Text);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
+            catch (Exception) { }
             Response.Redirect(Request.RawUrl);
         }
 
@@ -65,17 +69,20 @@ namespace TechGeeks.Admin
 
         protected void GridView1_RowUpdating(object sender, GridViewUpdateEventArgs e)
         {
-            string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
-            SqlConnection con = new SqlConnection(constring);
-            using (SqlCommand cmd = new SqlCommand("sp_updateRSSFeed", con))
+            try
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@title", GridView1.DataKeys[e.RowIndex].Value);
-                cmd.Parameters.AddWithValue("@rss", e.NewValues["url"]);
-                con.Open();
-                cmd.ExecuteNonQuery();
+                string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_updateRSSFeed", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@title", GridView1.DataKeys[e.RowIndex].Value);
+                    cmd.Parameters.AddWithValue("@rss", e.NewValues["url"]);
+                    con.Open();
+                    cmd.ExecuteNonQuery();
+                }
             }
-
+            catch (Exception) { }
             e.Cancel = true;
             Response.Redirect(Request.RawUrl);
         }

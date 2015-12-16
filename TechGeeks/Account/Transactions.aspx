@@ -6,15 +6,21 @@
       <Columns>
          <asp:BoundField DataField="TransactionId" HeaderText="ID" SortExpression="TransactionId" />
          <asp:BoundField DataField="Bought_date" HeaderText="Bought at" SortExpression="Bought_date" />
-         <asp:BoundField DataField="Product_id" HeaderText="Product ID" SortExpression="Product_id" />
+         <asp:TemplateField HeaderText="Product ID" SortExpression="Product_id">
+            <EditItemTemplate>
+               <asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("Product_id") %>'></asp:TextBox>
+            </EditItemTemplate>
+            <ItemTemplate>
+               <asp:Label ID="Label1" runat="server" Text='<%# Bind("Product_id") %>'></asp:Label>
+            </ItemTemplate>
+         </asp:TemplateField>
          <asp:BoundField DataField="Product_name" HeaderText="Product Name" SortExpression="Product_id" />
          <asp:BoundField DataField="Quantity" HeaderText="Quantity" SortExpression="Quantity" />
          <asp:TemplateField HeaderText="Feedback">
             <ItemTemplate>
-               <a href="#" data-toggle="modal" data-target='#modal<%# Eval("TransactionId") %>'><i class="fa fa-star"></i>&nbsp;Submit</a>
+               <a href="#" data-toggle="modal" data-target='<%# String.Format("#modal{0}", Eval("Product_id")) %>'><i class="fa fa-star"></i>&nbsp;Submit</a>
                &nbsp;<a runat="server" href='<%# String.Format("~/Shop/Reviews/{0}", Eval("Product_id")) %>' data-toggle="modal"><i class="fa fa-comment"></i>&nbsp;View</a>
-
-               <div class="modal fade" id='modal<%# Eval("TransactionId") %>' tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+               <div class="modal fade" id='<%# String.Format("modal{0}", Eval("Product_id")) %>' tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
                  <div class="modal-dialog" role="document">
                    <div class="modal-content">
                      <div class="modal-header">
@@ -22,7 +28,8 @@
                         <asp:Label ID="Label2" CssClass="h4 text-center" runat="server" Text='Feedback Modal'></asp:Label>
                      </div>
                      <div class="modal-body">
-                       <asp:TextBox ID='data' CssClass="form-control textarea-noresize" Height="300px" Wrap="true" 
+                        <asp:Label Visible="false" runat="server" ID="productIdLabel" Text='<%# String.Format("{0}", Eval("Product_id")) %>'></asp:Label>
+                        <asp:TextBox ID='data' CssClass="form-control textarea-noresize" Height="300px" Wrap="true" 
                           runat="server" TextMode="MultiLine"></asp:TextBox>
                      </div>
                      <div class="modal-footer">

@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="RSS Feeds Management" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="ManageFeeds.aspx.cs" Inherits="TechGeeks.Admin.ManageFeeds" %>
 
+<%@ Register Assembly="TechGeeks" Namespace="TechGeeks.Models" TagPrefix="cc1" %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
 
     <br />
-    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+    <cc1:FlexibleGridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
       DataKeyNames="title" DataSourceID="XmlDataSourceFeeds" GridLines="None" CssClass="table table-condensed"
-       ShowFooter="True" ShowHeaderWhenEmpty="true" OnRowDeleting="GridView1_RowDeleting" OnRowUpdating="GridView1_RowUpdating" >
+       ShowFooter="True" ShowHeaderWhenEmpty="true" ShowFooterWhenEmpty="true" OnRowDeleting="GridView1_RowDeleting" OnRowUpdating="GridView1_RowUpdating" >
       <Columns>
 
          <asp:TemplateField HeaderText="Title" SortExpression="title">
@@ -48,7 +50,7 @@
       
       <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
       <HeaderStyle BackColor="IndianRed" ForeColor="White" />
-   </asp:GridView>
+   </cc1:FlexibleGridView>
 
     <asp:XmlDataSource EnableCaching="false" ID="XmlDataSourceFeeds" runat="server" XPath="/Feeds/Feed">
    </asp:XmlDataSource>
