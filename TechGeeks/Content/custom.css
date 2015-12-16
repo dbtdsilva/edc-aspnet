@@ -32,3 +32,8 @@
 .textarea-noresize {
     resize: vertical;
 }
+
+.rss_thumbnail>img {
+    max-width: 90%;
+    max-height:50%;
+}

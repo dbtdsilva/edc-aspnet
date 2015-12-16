@@ -7,9 +7,29 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace TechGeeks {
-    
-    
-    public partial class Feeds {
+namespace TechGeeks
+{
+
+
+    public partial class Feeds
+    {
+
+        /// <summary>
+        /// filterTextBox control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox filterTextBox;
+
+        /// <summary>
+        /// Xml1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Xml Xml1;
     }
 }

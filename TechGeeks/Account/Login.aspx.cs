@@ -101,6 +101,19 @@ namespace TechGeeks.Account
             IdentityResult result = manager.Create(user, PasswordRegister.Text);
             if (result.Succeeded)
             {
+                if (ReferralRegister.Text != null && ReferralRegister.Text != "")
+                {
+                    string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                    SqlConnection con = new SqlConnection(constring);
+                    using (SqlCommand cmd = new SqlCommand("sp_incrementPoints", con))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@referrer", ReferralRegister.Text);
+                        cmd.Parameters.AddWithValue("@points", 10);
+                        con.Open();
+                        cmd.ExecuteNonQuery();
+                    }
+                }
                 if (!userMgr.IsInRole(user.Id, "member"))
                     IdUserResult = userMgr.AddToRole(user.Id, "member");
 

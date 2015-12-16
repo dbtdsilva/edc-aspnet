@@ -15,7 +15,7 @@
       <div class="col-md-6">
          <asp:GridView ID="GridView1" runat="server" DataSourceID="XmlDataSourceNewsletter" 
             AutoGenerateColumns="false" GridLines="None" CssClass="table table-condensed" 
-            OnRowDeleting="GridView1_RowDeleting">
+            OnRowDeleting="GridView1_RowDeleting" ShowHeaderWhenEmpty="true" >
             <Columns>
                <asp:BoundField DataField="value" HeaderText="Email list" />
                <asp:TemplateField HeaderText="Unsubscribe">

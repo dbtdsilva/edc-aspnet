@@ -5,7 +5,7 @@
     <br />
     <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
       DataKeyNames="title" DataSourceID="XmlDataSourceFeeds" GridLines="None" CssClass="table table-condensed"
-       ShowFooter="True" OnRowDeleting="GridView1_RowDeleting" OnRowUpdating="GridView1_RowUpdating" >
+       ShowFooter="True" ShowHeaderWhenEmpty="true" OnRowDeleting="GridView1_RowDeleting" OnRowUpdating="GridView1_RowUpdating" >
       <Columns>
 
          <asp:TemplateField HeaderText="Title" SortExpression="title">

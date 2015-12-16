@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="Products Management" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="ManageProducts.aspx.cs" Inherits="TechGeeks.Admin.ManageProducts" %>
 
+<%@ Register Assembly="TechGeeks" Namespace="TechGeeks.Models" TagPrefix="cc1" %>
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
    <h4 class="text-center">Select the product category below</h4>
    <asp:DropDownList CssClass="form-control" ID="ddlTypes" runat="server" AutoPostBack="true"
@@ -17,9 +19,9 @@
       <asp:ListItem Text="Laptops" Value="Laptop" />
       <asp:ListItem Text="Other" Value="Other" />
    </asp:DropDownList><br />
-   <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
+   <cc1:FlexibleGridView ID="GridView1" runat="server" AllowPaging="True" AllowSorting="True" AutoGenerateColumns="False"
       DataKeyNames="Id" DataSourceID="SqlDataSourceProducts" GridLines="None" CssClass="table table-condensed"
-      OnRowUpdating="GridView1_RowUpdating" OnRowDeleting="GridView1_RowDeleting" ShowFooter="True" >
+      OnRowUpdating="GridView1_RowUpdating" ShowFooterWhenEmpty="true" ShowHeaderWhenEmpty="true" OnRowDeleting="GridView1_RowDeleting" ShowFooter="True">
       <Columns>
          <asp:TemplateField HeaderText="Id" SortExpression="Id">
             <EditItemTemplate>
@@ -109,11 +111,6 @@
                <asp:Label ID="Label8" runat="server" Text='<%# Bind("LaunchDate") %>'></asp:Label>
             </ItemTemplate>
          </asp:TemplateField>
-         <asp:TemplateField HeaderText="Info">
-            <ItemTemplate>
-               
-            </ItemTemplate>
-         </asp:TemplateField>
          <asp:TemplateField HeaderText="Commands">
             <EditItemTemplate>
                <a href="#" data-toggle="modal" data-target="#modal<%# Eval("Id") %>"><i class="fa fa-search-plus"></i></a>
@@ -168,7 +165,7 @@
          </asp:TemplateField>
       </Columns>
       <HeaderStyle BackColor="LimeGreen" ForeColor="White" />
-   </asp:GridView>
+   </cc1:FlexibleGridView >
 
    <div class="row">
       <div class="col-md-6">

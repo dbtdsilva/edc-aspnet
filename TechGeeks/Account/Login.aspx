@@ -83,6 +83,12 @@
                   </div>
                </div>
                <div class="form-group">
+                  <asp:Label runat="server" AssociatedControlID="ReferralRegister" CssClass="col-md-2 control-label">Referral Email</asp:Label>
+                  <div class="col-md-10">
+                     <asp:TextBox runat="server" ID="ReferralRegister" CssClass="form-control" TextMode="Email" Placeholder="Insert your referral email here" />
+                  </div>
+               </div>
+               <div class="form-group">
                   <asp:Label runat="server" AssociatedControlID="PasswordRegister" CssClass="col-md-2 control-label">Password</asp:Label>
                   <div class="col-md-10">
                      <asp:TextBox runat="server" ID="PasswordRegister" TextMode="Password" CssClass="form-control" />
