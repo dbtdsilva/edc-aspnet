@@ -202,7 +202,8 @@
     <Content Include="App_Data\Data\ShoppingCart.xslt">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="App_Data\news.xslt" />
+    <Content Include="App_Data\Data\news.xslt" />
+    <Content Include="App_Data\Samples\dump.xml" />
     <Content Include="App_Data\Samples\Product.xml" />
     <Content Include="App_Data\Samples\Product2.xml" />
     <Content Include="App_Data\Samples\ProductList.xml" />
@@ -237,6 +238,7 @@
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Admin\Web.config" />
+    <Content Include="App_Data\Samples\dump.json" />
     <None Include="Service References\Feeds\Feeds.wsdl" />
     <None Include="Service References\GetDump\GetDump.disco" />
     <None Include="Service References\GetDump\configuration91.svcinfo" />

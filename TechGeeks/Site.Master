@@ -55,6 +55,8 @@
                </a>
                <div class="navbar-custom-menu">
                   <ul class="nav navbar-nav" runat="server">
+                     
+                     
                      <asp:Xml ID="cartNavbar" runat="server" 
                         TransformSource="~/App_Data/Data/ShoppingCart.xslt"></asp:Xml>
                      <!-- User Account: style can be found in dropdown.less -->
@@ -64,6 +66,11 @@
                            <li><a runat="server" href="~/Account/Login">Sign Up</a></li>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
+                           <li>
+                              <a href="#">
+                                 <b>Points:</b> <%=getNumberPoints() %>
+                              </a>
+                           </li>
                            <li class="dropdown user user-menu">
                               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                  <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="user-image" alt="User Image">
@@ -75,7 +82,6 @@
                                     <img src="<%: GravatarHelper.CreateGravatarUrl(Context.User.Identity.GetUserName(), 160, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, false) %>" class="img-circle" alt="User Image">
                                     <p>
                                        <%: Context.User.Identity.GetUserName()  %>
-                                       <small>Member since Nov. 2012</small>
                                     </p>
                                  </li>
                                  <!-- Menu Body -->
@@ -179,7 +185,7 @@
                               <li><a runat="server" href="~/Shop/Category/Networkcard">Network Card</a></li>
                               <li><a runat="server" href="~/Shop/Category/Chassis">Chassis</a></li>
                               <li><a runat="server" href="~/Shop/Category/HDD">Hard Disk Drive</a></li>
-                              <li><a runat="server" href="~/Shop/Category/SDD">Solid-state Drive</a></li>
+                              <li><a runat="server" href="~/Shop/Category/SSD">Solid-state Drive</a></li>
                               <li><a runat="server" href="~/Shop/Category/Other">Other</a></li>
                            </ul>
                         </li>

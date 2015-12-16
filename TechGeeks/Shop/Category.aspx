@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="Shop" MasterPageFile="~/Site.Master" Language="C#" AutoEventWireup="true" CodeBehind="Category.aspx.cs" Inherits="TechGeeks.Shop.Category" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
-   <asp:Literal EnableViewState="false" runat="server" ID="categoryTitle"/>
+   <h3><asp:Literal EnableViewState="false" runat="server" ID="categoryTitle"/> list</h3>
    <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" GridLines="None" CssClass="table table-condensed" AllowPaging="True" AllowSorting="True">
       <Columns>
          <asp:BoundField DataField="Name" HeaderText="Name" SortExpression="Name" />
@@ -29,7 +29,6 @@
                      </div>
                      <div class="modal-footer">
                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                       <button type="button" class="btn btn-primary">Save changes</button>
                      </div>
                    </div>
                  </div>
@@ -37,6 +36,11 @@
             </ItemTemplate>
          </asp:TemplateField>
       </Columns>
+      <EmptyDataTemplate>
+         <h3 class="text-center">There is no products available for this category.</h3>
+      </EmptyDataTemplate>
+      <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
    </asp:GridView>
    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="sp_getProducts" SelectCommandType="StoredProcedure">
       <SelectParameters>

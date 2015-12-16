@@ -14,7 +14,7 @@
       <asp:ListItem Text="Network Card" Value="Networkcard" />
       <asp:ListItem Text="Chassis" Value="Chassis" />
       <asp:ListItem Text="Hard Disk Drive" Value="HDD" />
-      <asp:ListItem Text="Solid-state Drive" Value="SDD" />
+      <asp:ListItem Text="Solid-state Drive" Value="SSD" />
       <asp:ListItem Text="Desktop Computers" Value="DesktopPC" />
       <asp:ListItem Text="Laptops" Value="Laptop" />
       <asp:ListItem Text="Other" Value="Other" />
@@ -127,7 +127,6 @@
                         </div>
                         <div class="modal-footer">
                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                      </div>
                   </div>
@@ -153,7 +152,6 @@
                         </div>
                         <div class="modal-footer">
                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                           <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                      </div>
                   </div>
@@ -164,7 +162,9 @@
             </ItemTemplate>
          </asp:TemplateField>
       </Columns>
-      <HeaderStyle BackColor="LimeGreen" ForeColor="White" />
+      
+      <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
    </cc1:FlexibleGridView >
 
    <div class="row">

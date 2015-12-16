@@ -190,6 +190,30 @@ namespace TechGeeks
             }
             Response.Redirect(Request.RawUrl);
         }
+
+        protected string getNumberPoints()
+        {
+            string points = "0";
+            if ((System.Web.HttpContext.Current.User != null) &&
+                System.Web.HttpContext.Current.User.Identity.IsAuthenticated)
+            {
+                
+                string constring = System.Configuration.ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+                SqlConnection con = new SqlConnection(constring);
+                using (SqlCommand cmd = new SqlCommand("sp_getUserPoints", con))
+                {
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@userId",
+                        Context.User.Identity.GetUserId());
+                    con.Open();
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                        points = reader.GetInt32(0).ToString();
+                }
+            }
+            return points;
+        }
     }
 
 }

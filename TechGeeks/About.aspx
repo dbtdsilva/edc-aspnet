@@ -42,7 +42,7 @@
          <div class="well">
             <div class="row">
                <div class="col-md-6">
-                  <img src="<%: GravatarHelper.CreateGravatarUrl("dsss@ua.pt", 
+                  <img src="<%: GravatarHelper.CreateGravatarUrl("diogo.corte@ua.pt", 
                      100, GravatarHelper.DefaultImageIdenticon, GravatarRating.G, false, 
                      false) %>" class="img-circle" alt="User Image">
                   <h3>Diogo Corte</h3>

@@ -45,7 +45,9 @@
          </asp:TemplateField>
 
       </Columns>
-      <HeaderStyle BackColor="LimeGreen" ForeColor="White" />
+      
+      <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
    </asp:GridView>
 
     <asp:XmlDataSource EnableCaching="false" ID="XmlDataSourceFeeds" runat="server" XPath="/Feeds/Feed">

@@ -16,10 +16,11 @@
             </ItemTemplate>
          </asp:TemplateField>
       </Columns>
+      <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
       <EmptyDataTemplate>
          <h3 class="text-center">There is no reviews yet, you can always be the first :)</h3>
       </EmptyDataTemplate>
-      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
    </asp:GridView>
 
    <asp:SqlDataSource ID="SqlDataSourceReviews" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="sp_getReviews" SelectCommandType="StoredProcedure">

@@ -29,6 +29,9 @@
                   There's no subscribers
                </h4>
             </EmptyDataTemplate>
+            
+            <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+            <HeaderStyle BackColor="IndianRed" ForeColor="White" />
          </asp:GridView>
       </div>
    </div>

@@ -39,6 +39,9 @@
       <EmptyDataTemplate>
          <h3 class="text-center">You haven't made any transactions yet.</h3>
       </EmptyDataTemplate>
+      
+      <PagerStyle HorizontalAlign="Center" CssClass="pagination-ys" />
+      <HeaderStyle BackColor="IndianRed" ForeColor="White" />
    </asp:GridView>
    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:DefaultConnection %>" SelectCommand="sp_getUserTransactions" SelectCommandType="StoredProcedure">
       <SelectParameters>
